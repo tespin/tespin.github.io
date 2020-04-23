@@ -20,7 +20,7 @@
             renderer.shadowMap.type = THREE.PCFSoftShadowMap;
             document.body.appendChild( renderer.domElement );
 
-            var light = new THREE.DirectionalLight(0000ff, 1, 100);
+            var light = new THREE.DirectionalLight(0x0000ff, 1, 100);
             light.position.set(0, 1, 0);
             light.castShadow = true;
             scene.add(light);
