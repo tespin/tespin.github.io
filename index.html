@@ -29,10 +29,10 @@
             light.target.position.copy(scene.position);
             scene.add(new THREE.DirectionalLightHelper(light, 2.5));
             light.castShadow = true;
-            light.shadow.camera.bottom = -25;
-            light.shadow.camera.top = 25;
-            light.shadow.camera.left = 25;
-            light.shadow.camera.right = -25;
+            light.shadow.camera.bottom = -50;
+            light.shadow.camera.top = 50;
+            light.shadow.camera.left = 50;
+            light.shadow.camera.right = -50;
             scene.add(light);
 
             var cameraHelper = new THREE.CameraHelper(light.shadow.camera);
