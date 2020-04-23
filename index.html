@@ -30,7 +30,7 @@
             light.shadow.camera.near = 0.5;
             light.shadow.camera.far = 500;
 
-            var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+            var geometry = new THREE.BoxGeometry( 5, 32, 32 );
             var material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
             var cube = new THREE.Mesh( geometry, material );
             cube.castShadow = true;
