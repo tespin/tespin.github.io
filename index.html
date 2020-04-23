@@ -29,10 +29,10 @@
             light.target.position.copy(scene.position);
             scene.add(new THREE.DirectionalLightHelper(light, 2.5));
             light.castShadow = true;
-            light.shadow.camera.bottom = -100;
-            light.shadow.camera.top = 100;
-            light.shadow.camera.left = 100;
-            light.shadow.camera.right = -100;
+            light.shadow.camera.bottom = -25;
+            light.shadow.camera.top = 25;
+            light.shadow.camera.left = 25;
+            light.shadow.camera.right = -25;
             scene.add(light);
 
             var cameraHelper = new THREE.CameraHelper(light.shadow.camera);
@@ -41,7 +41,7 @@
             var geometry = new THREE.BoxGeometry( 5, 5, 70);
             var material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
             var box = new THREE.Mesh( geometry, material );
-            box.position.set(10, 20, 10);
+            box.position.set(10, 40, 10);
             box.castShadow = true;
             scene.add(box);
 
