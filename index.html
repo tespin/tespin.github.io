@@ -1,62 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tristan Espinoza</title>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>perennial</title>
+        <style>
+            body { margin: 0; }
+            canvas {display: block; }
+        </style>
+    </head>
+    <body>
+        <script src="js/three.js"></script>
+        <script>
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 
-  <link href="//fonts.googleapis.com/css?family=FiraSans:400" rel="stylesheet" type="text/css">
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="offset-by-two eight columns" style="margin-top: 15%">
-        <h2 id="Tristan-Espinoza">Tristan Espinoza</h2>
+            var geometry = new THREE.BoxGeometry();
+            var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
+            var cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
 
-        <p>I'm a creative coder living in Los Angeles. I use code as creative material to negotiate the joys and frustrations of understanding each other, and mostly focus on developing interactive applications that invite participants to connect and overlap in weird, spontaneous ways. My work situates technology in sociopolitical contexts and is informed by human relationships, emotional vulnerability, and infrastructure legibility. I think the best kind of approach here is inherently a collaborative and interdisciplinary one, so I frequently supplement my creative coding projects by intersecting with peers or learning new technologies (which is how I started making 3D assets + animations in Autodesk Maya).
+            camera.position.z = 5;
 
-        <p>I'll often post sketches, iterations, and processes on <a href="https://www.instagram.com/tatay.dior/">Instagram</a>. It helps me engage with friends and collaborators, get feedback, and fine-tune my ideas in the quickest, most un-worklike manner as possible. For me, this is a healthy contrast and helps me stay creative and joyful.</p>
+            var animate = function() {
+                requestAnimationFrame(animate);
 
-        <p>In the meantime, this page will be here as I navigate life things and update the rest of the site! I will keep links to recent work and documentation up-to-date during this process.</p>
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
 
-<hr />
+                renderer.render(scene, camera);
+            }
 
-        <h3 id="Work">Work</h3>
-
-        <h4 id="A-Ray-Tracing">A Ray, Tracing Between You and I</h4>
-        <p><a href="https://github.com/tespin/a_ray_tracing"><i>A Ray, Tracing</i></a> is a project I made for the show <i>Late Bloomers</i> at Supplyframe DesignLab in Pasadena, CA. It uses computer vision techniques to extract new contours from a scene and overlay the shapes on top of a live feed.</p>
-        <p>This was made in C++ with openFrameworks.</p>
-
-        <h4 id="TEDxPasadena">TEDxPasadena</h4>
-        <p><a href="https://github.com/tespin/tedxpasadena">This</a> project was used at the TEDxPasadena event in September 2018. The organizers wanted to personalize attendees' badges in a way that promoted conversation and collaboration without the transactional assessments associated with typical badges that listed an attendee's name and professional / institutional affiliations.</p>
-        <p>This application took a word or phrase from a participant and used it to dynamically create geometric art, which was then milled onto a sticker that could be placed on the attendee's badge.</p>
-        <p>I used C++ and openFrameworks for this project.</p>
-
-        <h4 id="The-Girl-Who-Sees">The Girl Who Sees</h4>
-        <p>I spent a good chunk of the year collaboratively developing <a href="https://www.girlwhosees.com/"><i>The Girl Who Sees</i></a>, a video game about Filipinx history and mythology. I was responsible for the "adventure" aspect of the game, working on narrative flow, transitions, inventory, etc.</p>
-        <p>The game is being built in Unity. The scripting I did was primarily in C#, but I learned some basic Lua to accommodate a plug-in they were using for narrative actions called Fungus.</p> 
-
-        <h4 id="Text-Warp">Text Warp</h4>
-        <p><a href="https://github.com/tespin/text_warp"><i>Text Warp</i></a> is a quick series of kinetic typography experiments using computer vision techniques. They often involve extracting a contour in a scene and <a href="https://www.instagram.com/p/BjnzdaXlFNH/?taken-by=tristan.jovani">moving letters along the path</a> or turning the letters into shapes that can be manipulated by other objects in the scene, like <a href="https://www.instagram.com/p/Bip61nulkPz/?taken-by=tristan.jovani">my face</a> or a <a href="https://www.instagram.com/p/BmUHf-kDhmv/?taken-by=tristan.jovani">bottle of cold brew</a>.
-        <p>These experiments use C++ and openFrameworks.</p>
-
-        <h4 id="Dwayne-Detector">Dwayne Detector</h4>
-        <p>The <a href="https://github.com/tespin/dwayne-detector"><i>Dwayne Detector</i></a> is a command-line application that uses an image or video feed to analyze the faces in the input and assess whether or not the face belongs to Dwayne "The Rock" Johnson.</p>
-        <p>The <i>Dwayne Detector</i> was built with Python using dlib's Python bindings.</p>
-
-        <h4 id="Processing-Sketches">Processing Sketches</h4>
-        <p>I like to use Processing when I'm coding to relax and laugh. Most of these sketches work almost exclusively with typography; a lot of them are actually non-interactive versions of applications that made it into the <i>Text Warp</i> series. Many of my ideas start here. Here's a few favorites: <a href="https://www.instagram.com/p/BgAFnCenfsj/?taken-by=tristan.jovani">Pasyon</a>  | <a href="https://www.instagram.com/p/BgSVti1j4NE/?taken-by=tristan.jovani">Blah</a> | <a href="https://www.instagram.com/p/BhM3aXTH5mp/?taken-by=tristan.jovani">B</a> | <a href="https://www.instagram.com/p/BhXML2pnQ3g/?taken-by=tristan.jovani">Wavy Fuck</a> | <a href="https://www.instagram.com/p/BhcqN_NFOGJ/?taken-by=tristan.jovani">Dior</a>
-
-        <h4 id="kmeans-TSNE">kmeans-TSNE</h4>
-        <p>I made <a href="https://github.com/tespin/kmeans-TSNE">this</a> project because I was interested in different ways of engaging with + consuming visual, time-based material like films. Here, I took image sequences from a movie -- usually anywhere between 5000 to 10000 frames -- and applied the t-SNE and kmeans algorithms to group them together and define their relationships in semantically meaningful ways.</p>
-        <p>The repository I link to above goes to an iteration where the frames are assigned to a 3D grid, but I did start with 2D assignments which led to surprisingly compelling compositions. I really like <a href="https://www.instagram.com/p/BlrJYpaD5pL/?taken-by=tristan.jovani">this one</a> where I used the film <i>Moonlight</i> as my dataset. <a href="https://www.instagram.com/p/BX9QiP9FLVk/?taken-by=tristan.jovani">This</a> is a good example too, using <i>2001: A Space Odyssey</i>.
-
-      </div>
-    </div>
-  </div>
-
-</body>
+            animate();
+        </script>
+    </body>
 </html>
