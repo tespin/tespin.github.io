@@ -31,6 +31,9 @@
             light.castShadow = true;
             scene.add(light);
 
+            var cameraHelper = new THREE.CameraHelper(light.shadow.camera);
+            scene.add(cameraHelper);
+
             var geometry = new THREE.BoxGeometry( 5, 5, 70);
             var material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
             var box = new THREE.Mesh( geometry, material );
