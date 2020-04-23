@@ -16,12 +16,32 @@
 
             var renderer = new THREE.WebGLRenderer();
             renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
             document.body.appendChild( renderer.domElement );
 
+            var light = new THREE.DirectionalLight(0000ff, 1, 100);
+            light.position.set(0, 1, 0);
+            light.castShadow = true;
+            scene.add(light);
+
+            light.shadow.mapSize.width = 512;
+            light.shadow.mapSize.height = 512;
+            light.shadow.camera.near = 0.5;
+            light.shadow.camera.far = 500;
+
             var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-            var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+            var material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
             var cube = new THREE.Mesh( geometry, material );
+            cube.castShadow = true;
+            cube.receiveShadow = false;
             scene.add( cube );
+
+            var planeGeom = new THREE.PlaneBufferGeometry(20, 20, 32, 32);
+            var planeMat = new THREE.MeshStandaradMaterial({color: 0x00ff00});
+            var plane = new THREE.Mesh(planeGeom, planeMat);
+            plane.receiveShadow = true;
+            scene.add(plane);
 
             camera.position.z = 5;
 
