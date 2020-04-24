@@ -54,7 +54,7 @@
             scene.add(ground);
 
             var loader = new THREE.GLTFLoader();
-            loader.load('models/orange-tree.glb', function(gltf) {
+            loader.load('models/gltf/orange-tree.glb', function(gltf) {
                 scene.add(gltf.scene);
             }, undefined, function(error) {
                 console.error(error);
