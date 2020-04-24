@@ -26,8 +26,8 @@
             document.body.appendChild( renderer.domElement );
 
             var light = new THREE.DirectionalLight(0xffffff);
-            light.position.set(20, 350, 0);
-            light.target.position.copy(scene.position);
+            light.position.set(100, 325, 35);
+            <!--light.target.position.copy(scene.position);-->
             scene.add(new THREE.DirectionalLightHelper(light, 2.5));
             light.castShadow = true;
             light.shadow.camera.bottom = -125;
@@ -58,10 +58,14 @@
                 model = gltf.scene.children[2];
                 model.castShadow = true;
                 model.receiveShadow = true;
+                light.target = model;
+                scene.add(light.target);
                 scene.add(model);
             }, undefined, function(error) {
                 console.error(error);
             });
+
+            
 
             var animate = function () {
 	        requestAnimationFrame( animate );
