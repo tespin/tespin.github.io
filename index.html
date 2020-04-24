@@ -56,6 +56,7 @@
             var loader = new THREE.GLTFLoader();
             loader.load('assets/gltf/zremeshed4.glb', function(gltf) {
                 model = gltf.scene.children[2];
+                model.position.set(0, -30, 0);
                 model.castShadow = true;
                 model.receiveShadow = true;
                 light.target = model;
