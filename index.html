@@ -26,7 +26,7 @@
             document.body.appendChild( renderer.domElement );
 
             var light = new THREE.DirectionalLight(0xffffff);
-            light.position.set(190, 100, 75);
+            light.position.set(190, 150, 75);
             <!--light.target.position.copy(scene.position);-->
             scene.add(new THREE.DirectionalLightHelper(light, 2.5));
             light.castShadow = true;
