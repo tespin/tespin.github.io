@@ -51,12 +51,12 @@
             var ground = new THREE.Mesh(groundGeom, groundMat);
             ground.position.set(0, 5, 0);
             ground.receiveShadow = true;
-            scene.add(ground);
+            <!--scene.add(ground);-->
 
             var loader = new THREE.GLTFLoader();
             loader.load('assets/gltf/zremeshed4.glb', function(gltf) {
                 model = gltf.scene.children[2];
-                model.position.set(0, -30, 0);
+                model.position.set(0, -15, 0);
                 model.castShadow = true;
                 model.receiveShadow = true;
                 light.target = model;
