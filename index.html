@@ -26,14 +26,14 @@
             document.body.appendChild( renderer.domElement );
 
             var light = new THREE.DirectionalLight(0xffffff);
-            light.position.set(190, 150, 75);
+            light.position.set(190, 125, 75);
             <!--light.target.position.copy(scene.position);-->
             scene.add(new THREE.DirectionalLightHelper(light, 2.5));
             light.castShadow = true;
-            light.shadow.camera.bottom = -125;
-            light.shadow.camera.top = 125;
-            light.shadow.camera.left = 125;
-            light.shadow.camera.right = -125;
+            light.shadow.camera.bottom = -150;
+            light.shadow.camera.top = 150;
+            light.shadow.camera.left = 150;
+            light.shadow.camera.right = -150;
             scene.add(light);
 
             var cameraHelper = new THREE.CameraHelper(light.shadow.camera);
