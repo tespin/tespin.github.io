@@ -36,8 +36,8 @@
             light.shadow.camera.right = -150;
             scene.add(light);
 
-            var light = new THREE.AmbientLight( 0x404040, 0.5); // soft white light
-            scene.add( light );
+            var ambient = new THREE.AmbientLight( 0x404040, 0.5); // soft white light
+            scene.add(ambient);
 
             var cameraHelper = new THREE.CameraHelper(light.shadow.camera);
             scene.add(cameraHelper);
