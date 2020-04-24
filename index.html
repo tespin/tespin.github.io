@@ -55,7 +55,7 @@
 
             var loader = new THREE.GLTFLoader();
             loader.load('assets/gltf/zremeshed4.glb', function(gltf) {
-                model = gltf.scene.children[0];
+                model = gltf.scene.children[2];
                 scene.add(model);
             }, undefined, function(error) {
                 console.error(error);
