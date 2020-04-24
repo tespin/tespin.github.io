@@ -53,7 +53,7 @@
             ground.receiveShadow = true;
             scene.add(ground);
 
-            var loader = new GLTFLoader();
+            var loader = new THREE.GLTFLoader();
             loader.load('models/orange-tree.glb', function(gltf) {
                 scene.add(gltf.scene);
             }, undefined, function(error) {
