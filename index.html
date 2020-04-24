@@ -34,10 +34,13 @@
             light.shadow.camera.top = 150;
             light.shadow.camera.left = 150;
             light.shadow.camera.right = -150;
-            scene.add(light);
+            <!--scene.add(light);-->
 
-            var ambient = new THREE.AmbientLight( 0x404040, 0.5); // soft white light
-            scene.add(ambient);
+            var hemisphere = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.6);
+            hemisphere.color.setHSL(0.6, 1, 0.6);
+            hemisphere.groundColor.setHSL(0.095, 1, 0.75);
+            hemisphere.position.set(0, 150, 0);
+            scene.add(hemisphere);
 
             var cameraHelper = new THREE.CameraHelper(light.shadow.camera);
             scene.add(cameraHelper);
