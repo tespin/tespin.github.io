@@ -104,13 +104,14 @@
                 //var lightZ = Math.sin(sunPos.azimuth + Math.PI) * azimuthRadius;
 
                 var lightX = Math.cos(sunPos.azimuth + Math.PI) * Math.sin(sunPos.azimuth + Math.PI) * azimuthRadius;
-                var lightY = Math.cos((Math.PI / 2) - (sunPos.altitude)) * altitudeRadius;
+                var lightY = Math.cos(sunPos.altitude) * altitudeRadius;
                 var lightZ = Math.sin(sunPos.azimuth + Math.PI) * Math.sin(sunPos.azimuth + Math.PI) * azimuthRadius;
 
                 light.position.x = lightX;
                 light.position.y = lightY;
                 light.position.z = lightZ;
-                console.log((sunPos.azimuth + Math.PI) * 180 / Math.PI);
+                //console.log((sunPos.azimuth + Math.PI) * 180 / Math.PI);
+                console.log(sunPos.altitude);
 
                 renderer.render(scene, camera);
 
