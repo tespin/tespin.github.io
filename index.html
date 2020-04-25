@@ -35,7 +35,8 @@
             renderer.shadowMap.type = THREE.PCFSoftShadowMap;
             document.body.appendChild( renderer.domElement );
 
-            var light = new THREE.DirectionalLight(0xffffff);
+            var dirColor = new THREE.Color("hsl(209, 98%, 41%)");
+            var light = new THREE.DirectionalLight(dirColor);
             light.position.set(-190, 125, -75);
             <!--light.target.position.copy(scene.position);-->
             scene.add(new THREE.DirectionalLightHelper(light, 1.1));
