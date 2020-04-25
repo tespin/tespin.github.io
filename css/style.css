@@ -7,7 +7,7 @@ canvas {
 }
 
 #altitude {
-    position: relative;
+    position: absolute;
     top: 10px;
     width: 100%;
     text-align: left;
@@ -16,7 +16,7 @@ canvas {
 }
 
 #azimuth {
-    position: relative;
+    position: absolute;
     top: 20px;
     width: 100%;
     text-align: left;
