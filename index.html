@@ -9,6 +9,7 @@
         </style>
     </head>
     <body>
+        <script src="js/suncalc.js"></script>
         <script src="js/three.min.js"></script>
         <script src="js/GLTFLoader.js"></script>
         <script>
@@ -72,7 +73,8 @@
                 console.error(error);
             });
 
-            
+            var times = SunCalc.getTimes(new Date(), 51.5, -0.1);
+            console.log(times);
 
             var animate = function () {
 	        requestAnimationFrame( animate );
