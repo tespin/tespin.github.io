@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <title>perennial</title>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
@@ -112,16 +113,15 @@
             };
             calcSun();
 
-            var animate = function () {
-	        requestAnimationFrame( animate );
+            var onWindowResize = function() {
+                camera.aspect = windows.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
 
-  	        box.rotation.x += 0.01;
-	        box.rotation.y += 0.01;
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
 
-                renderer.render( scene, camera );
-            };
+            window.addEventListener('resize', onWindowResize, false);
 
-            //animate();
         </script>
     </body>
 </html>
