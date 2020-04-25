@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+canvas {
+    display: block;
+}
+
+#altitude {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display:block;
+}
+
+#azimuth {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display:block;
+}
