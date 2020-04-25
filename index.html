@@ -48,8 +48,10 @@
             scene.add(light);
 
             var hemisphere = new THREE.HemisphereLight(0xffffff, 0xffffff, 1.1);
-            hemisphere.color.setHSL(0.6, 1, 0.6);
-            hemisphere.groundColor.setHSL(0.095, 1, 0.75);
+            var col = new THREE.Color("hsl(210, 60%, 53%)");
+            var groundCol = new THREE.Color("hsl(210, 98%, 33%)");
+            hemisphere.color = col;
+            hemisphere.groundColor = groundCol;
             hemisphere.position.set(0, 150, 0);
             scene.add(hemisphere);
 
