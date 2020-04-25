@@ -17,7 +17,7 @@ canvas {
 
 #azimuth {
     position: absolute;
-    top: 25px;
+    top: 30px;
     width: 100%;
     text-align: left;
     z-index: 100;
