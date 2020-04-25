@@ -21,7 +21,7 @@
             var scene = new THREE.Scene();
             var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
             //camera.position.set(225, 50, 225);
-            camera.position.set(0, 50, 225);
+            camera.position.set(0, 50, 300);
             camera.lookAt(scene.position.x, scene.position.y+125, scene.position.z);
             scene.add(camera);
 
@@ -32,7 +32,6 @@
             renderer.shadowMapType = THREE.PCFSoftShadowMap;
             document.body.appendChild( renderer.domElement );
 
-            var radius = 100;
             var light = new THREE.DirectionalLight(0xffffff);
             light.position.set(-190, 125, -75);
             <!--light.target.position.copy(scene.position);-->
@@ -94,7 +93,7 @@
             var calcSun = function() {
                 requestAnimationFrame(calcSun);
                 var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
-                var altitudeRadius = 300;
+                var altitudeRadius = 400;
                 var azimuthRadius = 50;
 
                 //var lightX = Math.cos(sunPos.altitude) * altitudeRadius;
