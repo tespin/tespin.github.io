@@ -80,13 +80,13 @@
             });
 
             // goes from -pi/2 to pi/2
-            var sunpos = SunCalc.getPosition(new Date(), 34.1, -118.4);
+            //var sunpos = SunCalc.getPosition(new Date(), 34.1, -118.4);
             //var altitude = map(sunpos.altitude, -Math.PI/2, Math.PI/2, -100, 100);
             //console.log(altitude);
 
-            var altitude = sunpos.altitude * 180 / Math.PI;
-            var azimuth = (sunpos.azimuth + Math.PI) * 180 / Math.PI;
-            console.log(azimuth);
+            //var altitude = sunpos.altitude * 180 / Math.PI;
+            //var azimuth = (sunpos.azimuth + Math.PI) * 180 / Math.PI;
+            //console.log(azimuth);
             //console.log(sunpos.altitude * 180 / Math.PI);
             //console.log(map(altitude, 0, Math.PI/2, 0, 100));
 
@@ -101,12 +101,12 @@
 
                 light.position.z = lightZ;
                 light.position.y = lightY;
-                console.log(sunPos.azimuth * 180 / Math.PI);
+                console.log((sunPos.azimuth + Math.PI) * 180 / Math.PI);
 
                 renderer.render(scene, camera);
 
             };
-            //calcSun();
+            calcSun();
 
             var animate = function () {
 	        requestAnimationFrame( animate );
