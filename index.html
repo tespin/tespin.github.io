@@ -9,6 +9,8 @@
         </style>
     </head>
     <body>
+        <h2 id="altitude"></h2>
+        <h2 id="azimuth"></h2>
         <script src="js/suncalc.js"></script>
         <script src="js/three.min.js"></script>
         <script src="js/GLTFLoader.js"></script>
@@ -102,6 +104,8 @@
                 light.position.z = lightZ;
 
                 //console.log(sunPos.altitude * 180 / Math.PI);
+                document.getElementById("altitude") = sunPos.altitude * 180 / Math.PI
+                document.getElementById("azimuth") = (sunPos.azimuth + Math.PI) * 180 / Math.PI
 
                 renderer.render(scene, camera);
 
