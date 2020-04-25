@@ -106,8 +106,8 @@
                 light.position.z = lightZ;
 
                 //console.log(sunPos.altitude * 180 / Math.PI);
-                document.getElementById("altitude").innerHTML = "Altitude: " + altDeg.toFixed(2);
-                document.getElementById("azimuth").innerHTML = "Azimuth: " + aziDeg.toFixed(2);
+                document.getElementById("altitude").innerHTML = "Altitude: " + altDeg.toFixed(2) + "&deg;";
+                document.getElementById("azimuth").innerHTML = "Azimuth: " + aziDeg.toFixed(2) + "&deg;";
 
                 renderer.render(scene, camera);
 
