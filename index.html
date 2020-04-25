@@ -80,8 +80,8 @@
 
             var sunpos = SunCalc.getPosition(new Date(), 34.1, -118.4);
             var altitude = sunpos.altitude * 180 / Math.PI;
-            //console.log(sunpos.altitude * 180 / Math.PI);
-            console.log(map(altitude, 0, Math.PI/2, 0, 100));
+            console.log(sunpos.altitude * 180 / Math.PI);
+            //console.log(map(altitude, 0, Math.PI/2, 0, 100));
 
             var animate = function () {
 	        requestAnimationFrame( animate );
