@@ -39,7 +39,7 @@
             var light = new THREE.DirectionalLight(dirColor);
             light.position.set(-190, 125, -75);
             //light.target.position.copy(scene.position);
-            scene.add(new THREE.DirectionalLightHelper(light, 1.1));
+            //scene.add(new THREE.DirectionalLightHelper(light, 1.1));
             light.castShadow = true;
             light.shadow.camera.bottom = -150;
             light.shadow.camera.top = 150;
