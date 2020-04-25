@@ -100,7 +100,7 @@
 
                 light.position.z = lightZ;
                 light.position.y = lightY;
-                console.log(sunPos.azimuth);
+                console.log(sunPos.azimuth * 180 / Math.PI);
 
                 renderer.render(scene, camera);
 
