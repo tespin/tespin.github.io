@@ -7,19 +7,19 @@ canvas {
 }
 
 #altitude {
-    position: absolute;
+    position: relative;
     top: 10px;
     width: 100%;
-    text-align: center;
+    text-align: left;
     z-index: 100;
     display:block;
 }
 
 #azimuth {
-    position: absolute;
-    top: 10px;
+    position: relative;
+    top: 20px;
     width: 100%;
-    text-align: center;
+    text-align: left;
     z-index: 100;
     display:block;
 }
