@@ -96,11 +96,13 @@
                 var altitudeRadius = 100;
                 var azimuthRadius = 50;
 
+                var lightX = Math.cos(sunPos.altitude) * altitudeRadius;
                 var lightY = Math.sin(sunPos.altitude) * altitudeRadius;
                 var lightZ = Math.sin(sunPos.azimuth + Math.PI) * azimuthRadius;
 
-                light.position.z = lightZ;
+                light.position.x = lightX;
                 light.position.y = lightY;
+                light.position.z = lightZ;
                 console.log((sunPos.azimuth + Math.PI) * 180 / Math.PI);
 
                 renderer.render(scene, camera);
