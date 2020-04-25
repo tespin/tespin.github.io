@@ -9,6 +9,7 @@ canvas {
 #altitude {
     position: absolute;
     top: 10px;
+    left: 10px;
     width: 100%;
     text-align: left;
     z-index: 100;
@@ -17,7 +18,8 @@ canvas {
 
 #azimuth {
     position: absolute;
-    top: 30px;
+    top: 40px;
+    left: 10px;
     width: 100%;
     text-align: left;
     z-index: 100;
