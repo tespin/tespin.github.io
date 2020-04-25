@@ -96,9 +96,9 @@
                 var azimuthRadius = 50;
 
                 var lightY = Math.sin(sunPos.altitude) * altitudeRadius;
-                var lightX = Math.sin(sunPos.azimuth) * azimuthRadius;
+                var lightZ = Math.sin(sunPos.azimuth) * azimuthRadius;
 
-                light.position.x = lightX;
+                light.position.z = lightZ;
                 light.position.y = lightY;
                 console.log(lightY);
 
