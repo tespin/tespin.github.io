@@ -9,8 +9,8 @@
         </style>
     </head>
     <body>
-        <h2 id="altitude"></h2>
-        <h2 id="azimuth"></h2>
+        <h2 id="altitude" style="color:white;"></h2>
+        <h2 id="azimuth" style="color:white;"></h2>
         <script src="js/suncalc.js"></script>
         <script src="js/three.min.js"></script>
         <script src="js/GLTFLoader.js"></script>
@@ -92,6 +92,9 @@
             var calcSun = function() {
                 requestAnimationFrame(calcSun);
                 var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
+                var altDeg = sunPos.altitude * 180 / Math.PI;
+                var aziDeg = (sunPos.azimuth + Math.PI) * 180 / Math.PI;
+
                 var altitudeRadius = 600;
                 var azimuthRadius = 50;
 
@@ -104,8 +107,8 @@
                 light.position.z = lightZ;
 
                 //console.log(sunPos.altitude * 180 / Math.PI);
-                document.getElementById("altitude") = sunPos.altitude * 180 / Math.PI
-                document.getElementById("azimuth") = (sunPos.azimuth + Math.PI) * 180 / Math.PI
+                document.getElementById("altitude").value = altDeg;
+                document.getElementById("azimuth").value = aziDeg;
 
                 renderer.render(scene, camera);
 
