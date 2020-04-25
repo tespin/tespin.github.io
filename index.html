@@ -30,9 +30,9 @@
 
             var renderer = new THREE.WebGLRenderer();
             renderer.setSize( window.innerWidth, window.innerHeight );
-            renderer.shadowMapEnabled = true;
+            renderer.shadowMap.enabled = true;
             renderer.shadowMapSoft = true;
-            renderer.shadowMapType = THREE.PCFSoftShadowMap;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
             document.body.appendChild( renderer.domElement );
 
             var light = new THREE.DirectionalLight(0xffffff);
@@ -104,7 +104,7 @@
                 //var lightZ = Math.sin(sunPos.azimuth + Math.PI) * azimuthRadius;
 
                 var lightX = Math.cos(sunPos.azimuth + Math.PI) * Math.sin(sunPos.azimuth + Math.PI) * azimuthRadius;
-                var lightY = Math.cos((Math.PI/2) - sunPos.altitude) * altitudeRadius;
+                var lightY = Math.cos((Math.PI) - sunPos.altitude) * altitudeRadius;
                 var lightZ = Math.sin(sunPos.azimuth + Math.PI) * Math.sin(sunPos.azimuth + Math.PI) * azimuthRadius;
 
                 light.position.x = lightX;
