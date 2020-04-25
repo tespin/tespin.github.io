@@ -61,19 +61,20 @@
             var box = new THREE.Mesh( geometry, material );
             box.position.set(10, 40, 10);
             box.castShadow = true;
-            <!--scene.add(box);-->
+            //scene.add(box);
 
             var groundGeom = new THREE.BoxGeometry(100, 1, 100);
             var groundMat = new THREE.MeshLambertMaterial( {color: 0xff0000});
             var ground = new THREE.Mesh(groundGeom, groundMat);
             ground.position.set(0, 5, 0);
             ground.receiveShadow = true;
-            <!--scene.add(ground);-->
+            //scene.add(ground);
 
             var loader = new THREE.GLTFLoader();
             loader.load('assets/gltf/zremeshed4.glb', function(gltf) {
                 model = gltf.scene.children[2];
                 model.position.set(0, -15, 0);
+                model.rotation.y = Math.PI/2;
                 model.castShadow = true;
                 model.receiveShadow = true;
                 light.target = model;
@@ -83,26 +84,11 @@
                 console.error(error);
             });
 
-            // goes from -pi/2 to pi/2
-            //var sunpos = SunCalc.getPosition(new Date(), 34.1, -118.4);
-            //var altitude = map(sunpos.altitude, -Math.PI/2, Math.PI/2, -100, 100);
-            //console.log(altitude);
-
-            //var altitude = sunpos.altitude * 180 / Math.PI;
-            //var azimuth = (sunpos.azimuth + Math.PI) * 180 / Math.PI;
-            //console.log(azimuth);
-            //console.log(sunpos.altitude * 180 / Math.PI);
-            //console.log(map(altitude, 0, Math.PI/2, 0, 100));
-
             var calcSun = function() {
                 requestAnimationFrame(calcSun);
                 var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
                 var altitudeRadius = 600;
                 var azimuthRadius = 50;
-
-                //var lightX = Math.cos(sunPos.altitude) * altitudeRadius;
-                //var lightY = Math.sin(sunPos.altitude) * altitudeRadius;
-                //var lightZ = Math.sin(sunPos.azimuth + Math.PI) * azimuthRadius;
 
                 var lightX = Math.cos(sunPos.azimuth + Math.PI) * Math.sin(sunPos.azimuth + Math.PI) * azimuthRadius;
                 var lightY = Math.cos((Math.PI/2) - sunPos.altitude) * altitudeRadius;
@@ -111,8 +97,8 @@
                 light.position.x = lightX;
                 light.position.y = lightY;
                 light.position.z = lightZ;
-                //console.log((sunPos.azimuth + Math.PI) * 180 / Math.PI);
-                console.log(sunPos.altitude * 180 / Math.PI);
+
+                //console.log(sunPos.altitude * 180 / Math.PI);
 
                 renderer.render(scene, camera);
 
