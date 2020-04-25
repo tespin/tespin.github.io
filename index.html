@@ -73,9 +73,8 @@
                 console.error(error);
             });
 
-            var times = SunCalc.getTimes(new Date(), 34.1, -118.4);
-            console.log(times);
-            console.log(new Date());
+            var sunpos = SunCalc.getPosition(new Date(), 34.1, -118.4);
+            console.log(sunpos);
 
             var animate = function () {
 	        requestAnimationFrame( animate );
