@@ -10,6 +10,7 @@
         <div id="altitude" style="color:white"></div>
         <div id="azimuth" style="color:white"></div>
         <div id="coords" style="color:white">(34.0603284, -118.3573433)</div>
+        <script src="js/moment.min.js"></script>
         <script src="js/suncalc.js"></script>
         <script src="js/three.min.js"></script>
         <script src="js/GLTFLoader.js"></script>
@@ -92,18 +93,19 @@
             var calcSun = function() {
                 requestAnimationFrame(calcSun);
 
-                var d = new Date(), e = new Date(d);
-                var msSinceMidnight = e - d.setHours(0, 0, 0, 0);
-                // console.log(msSinceMidnight);
+                // var d = new Date(), e = new Date(d);
+                // var msSinceMidnight = e - d.setHours(0, 0, 0, 0);
+                // // console.log(msSinceMidnight);
 
-                var mappedMs = map(msSinceMidnight, 0, 86400000, 0, 4380000);
+                // var mappedMs = map(msSinceMidnight, 0, 86400000, 0, 4380000);
                 
-                var elapsed = Math.floor(d.getTime() + mappedMs);
-                console.log(new Date(elapsed));
+                // var elapsed = Math.floor(d.getTime() + mappedMs);
+                // console.log(new Date(elapsed));
 
+                console.log(moment());
 
-                // var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
-                var sunPos = SunCalc.getPosition(new Date(elapsed), 34.1, -118.4);
+                var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
+                // var sunPos = SunCalc.getPosition(new Date(elapsed), 34.1, -118.4);
                 var altDeg = sunPos.altitude * 180 / Math.PI;
                 var aziDeg = (sunPos.azimuth + Math.PI) * 180 / Math.PI;
 
