@@ -94,7 +94,10 @@
 
                 var d = new Date(), e = new Date(d);
                 var msSinceMidnight = e - d.setHours(0, 0, 0, 0);
-                console.log(msSinceMidnight);
+                // console.log(msSinceMidnight);
+
+                var mappedDuration = map(msSinceMidnight, 0, 86400000, 0, 4380000);
+                console.log(mappedDuration);
 
 
                 var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
