@@ -93,14 +93,13 @@
                 requestAnimationFrame(calcSun);
 
                 var d = new Date(), e = new Date(d);
-                var midnight = d.setHours(0, 0, 0, 0);
-                var msSinceMidnight = e - midnight;
+                var msSinceMidnight = e - d.setHours(0, 0, 0, 0);
                 // console.log(msSinceMidnight);
 
                 var mappedMs = map(msSinceMidnight, 0, 86400000, 0, 4380000);
                 console.log(mappedMs);
 
-                var elapsed = Math.floor(midnight.getTime() + mappedMs);
+                var elapsed = Math.floor(d.getTime() + mappedMs);
 
 
 
