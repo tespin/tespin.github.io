@@ -105,8 +105,10 @@
                 var current = moment();
                 var midnight = moment().startOf('day');
                 var elapsed = current.diff(midnight);
+                var interval = 4380000;
+                var intervalsPassed = elapsed.milliseconds() / interval;
 
-                console.log(elapsed);
+                console.log(intervalsPassed);
 
                 var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
                 // var sunPos = SunCalc.getPosition(new Date(elapsed), 34.1, -118.4);
