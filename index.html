@@ -97,10 +97,9 @@
                 // console.log(msSinceMidnight);
 
                 var mappedMs = map(msSinceMidnight, 0, 86400000, 0, 4380000);
-                console.log(mappedMs);
-
+                
                 var elapsed = Math.floor(d.getTime() + mappedMs);
-
+                console.log(new Date(elapsed));
 
 
                 // var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
