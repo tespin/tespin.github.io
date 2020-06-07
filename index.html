@@ -91,6 +91,12 @@
 
             var calcSun = function() {
                 requestAnimationFrame(calcSun);
+
+                var d = new Date(), e = new Date(d);
+                var msSinceMidnight = e - d.setHours(0, 0, 0, 0);
+                console.log(msSinceMidnight);
+
+
                 var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
                 var altDeg = sunPos.altitude * 180 / Math.PI;
                 var aziDeg = (sunPos.azimuth + Math.PI) * 180 / Math.PI;
