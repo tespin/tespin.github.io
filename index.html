@@ -97,10 +97,11 @@
             var interval = 4380000;
             var intervalsPassed = Math.floor(elapsed / interval);
             var start = midnight.milliseconds() + ((intervalsPassed+1) * interval);
+            var elapsedTime = 0;
 
             var timer = function() {
                 // requestAnimationFrame(timer);
-                var elapsedTime = moment() - start;
+                elapsedTime = moment() - start;
                 // console.log(elapsedTime);
                 if (elapsedTime > interval)
                 {
