@@ -99,7 +99,7 @@
             var start = midnight.milliseconds() + ((intervalsPassed+1) * interval);
 
             var timer = function() {
-                requestAnimationFrame(timer);
+                // requestAnimationFrame(timer);
                 var elapsedTime = moment() - start;
                 // console.log(elapsedTime);
                 if (elapsedTime > interval)
