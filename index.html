@@ -130,8 +130,9 @@
 
                 var mapped = Math.floor(map(elapsed, 0, 4380000, 0, 86400000));
 
-                var totalMs = midnight.milliseconds() + mapped;
-                console.log(totalMs);
+                // var totalMs = midnight.milliseconds() + mapped;
+                console.log(elapsed);
+                console.log(midnight.milliseconds());
                 // var sunPos = SunCalc.getPosition(new Date(totalMs), 34.1, -118.4); 
                 // var d = new Date(), e = new Date(d);
                 // var msSinceMidnight = e - d.setHours(0, 0, 0, 0);
