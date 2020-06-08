@@ -90,7 +90,7 @@
                 console.error(error);
             });
 
-            var current = Date.now();
+            var current = moment();
             var midnight = moment().startOf('day');
             var elapsed = current.diff(midnight);
             var interval = 4380000;
@@ -98,12 +98,12 @@
             var start = midnight.milliseconds() + ((intervalsPassed+1) * interval);
 
             var timer = function() {
-                var elapsedTime = Date.now() - start;
+                var elapsedTime = moment() - start;
                 console.log(elapsedTime);
                 if (elapsedTime > interval)
                 {
                     console.log("next hour")
-                    start = Date.now();
+                    start = moment();
                 }
             }
             timer();
