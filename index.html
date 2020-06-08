@@ -127,13 +127,15 @@
                 requestAnimationFrame(calcSun);
 
                 var elapsed = timer();
-
+                var mapped = Math.floor(map(elapsed, 0, 4380000, 0, 86400000));
+                var totalMs = midnight.valueOf() + mapped;
+                var sunPos = SunCalc.getPosition(new Date(totalMs), 34.1, -118.4);
                 // var mapped = Math.floor(map(elapsed, 0, 4380000, 0, 86400000));
 
                 // var totalMs = midnight.milliseconds() + mapped;
-                console.log(elapsed);
-                console.log(midnight);
-                console.log(midnight.valueOf());
+                // console.log(elapsed);
+                // console.log(midnight);
+                // console.log(midnight.valueOf());
                 // var sunPos = SunCalc.getPosition(new Date(totalMs), 34.1, -118.4); 
                 // var d = new Date(), e = new Date(d);
                 // var msSinceMidnight = e - d.setHours(0, 0, 0, 0);
@@ -157,7 +159,7 @@
                 // var mapped = map(current, istart, istop, 0, 4380)
 
 
-                var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
+                // var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
                 // var sunPos = SunCalc.getPosition(new Date(elapsed), 34.1, -118.4);
                 // var sunPos = sunCalc.getPosition()
                 var altDeg = sunPos.altitude * 180 / Math.PI;
