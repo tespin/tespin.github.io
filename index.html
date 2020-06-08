@@ -93,7 +93,8 @@
             var current = moment();
             var midnight = moment().startOf('day');
             var elapsed = current.diff(midnight);
-            var interval = 4380000;
+            // var interval = 4380000;
+            var interval = 2000;
             var intervalsPassed = Math.floor(elapsed / interval);
             var start = midnight.milliseconds() + ((intervalsPassed+1) * interval);
 
@@ -107,6 +108,7 @@
                     return elapsedTime;
                 }
             }
+            timer();
             // console.log(timer());
 
                 //             var current = moment();
