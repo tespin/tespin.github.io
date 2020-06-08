@@ -97,17 +97,19 @@
             var intervalsPassed = Math.floor(elapsed / interval);
             var start = midnight.milliseconds() + ((intervalsPassed+1) * interval);
 
-            var timer = function() {
-                var elapsedTime = moment() - start;
-                console.log(elapsedTime);
-                if (elapsedTime > interval)
-                {
-                    console.log("next hour")
-                    start = moment();
-                    return elapsedTime;
-                }
-            }
-            console.log(timer());
+            console.log(current);
+
+            // var timer = function() {
+            //     var elapsedTime = moment() - start;
+            //     console.log(elapsedTime);
+            //     if (elapsedTime > interval)
+            //     {
+            //         console.log("next hour")
+            //         start = moment();
+            //         return elapsedTime;
+            //     }
+            // }
+            // console.log(timer());
 
                 //             var current = moment();
                 // var midnight = moment().startOf('day');
