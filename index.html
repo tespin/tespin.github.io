@@ -90,6 +90,35 @@
                 console.error(error);
             });
 
+            var current = Date.now();
+            var midnight = moment().startOf('day');
+            var elapsed = current.diff(midnight);
+            var interval = 4380000;
+            var intervalsPassed = Math.floor(elapsed / interval);
+            var start = midnight.milliseconds() + ((intervalsPassed+1) * interval);
+
+            var timer = function() {
+                var elapsedTime = Date.now() - start;
+                console.log(elapsedTime);
+                if (elapsedTime > interval)
+                {
+                    console.log("next hour")
+                    start = Date.now();
+                }
+            }
+
+                //             var current = moment();
+                // var midnight = moment().startOf('day');
+                // var elapsed = current.diff(midnight);
+                // var interval = 4380000;
+                // var intervalsPassed = Math.floor(elapsed / interval);
+
+                // var istart = midnight.milliseconds() + ((intervalsPassed+1) * interval);
+                // var istop = istart + interval;
+                // console.log(istop);
+
+                // var mapped = map(current, istart, istop, 0, 4380)
+
             var calcSun = function() {
                 requestAnimationFrame(calcSun);
 
@@ -102,15 +131,17 @@
                 // var elapsed = Math.floor(d.getTime() + mappedMs);
                 // console.log(new Date(elapsed));
 
-                var current = moment();
-                var midnight = moment().startOf('day');
-                var elapsed = current.diff(midnight);
-                var interval = 4380000;
-                var intervalsPassed = Math.floor(elapsed / interval);
+                // var current = moment();
+                // var midnight = moment().startOf('day');
+                // var elapsed = current.diff(midnight);
+                // var interval = 4380000;
+                // var intervalsPassed = Math.floor(elapsed / interval);
 
-                var istart = midnight.milliseconds() + ((intervalsPassed+1) * interval);
-                var istop = istart + interval;
-                console.log(istop);
+                // var istart = midnight.milliseconds() + ((intervalsPassed+1) * interval);
+                // var istop = istart + interval;
+                // console.log(istop);
+
+                // var mapped = map(current, istart, istop, 0, 4380)
 
 
                 var sunPos = SunCalc.getPosition(new Date(), 34.1, -118.4);
