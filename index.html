@@ -100,13 +100,14 @@
             var timer = function() {
                 requestAnimationFrame(timer);
                 var elapsedTime = moment() - start;
+                console.log(elapsedTime);
                 if (elapsedTime > interval)
                 {
                     start = moment();
                     return elapsedTime;
                 }
             }
-            console.log(timer());
+            // console.log(timer());
 
                 //             var current = moment();
                 // var midnight = moment().startOf('day');
