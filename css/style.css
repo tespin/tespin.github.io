@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  body {
+    /* display: flex; */
+    background: #000000;
+    font-size: 62.5%;
+  }
+  canvas {
+    display: block;
+    /* width: 100%;
+    height: auto; */
+  }
+  #threejsDiv canvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+
+  #threejsDiv {
+    width: 100%;
+    max-width: 720px;
+    min-height: 643px;
+    min-width: 424px;
+    height: 475px;
+  }
+  #metadata {
+    position: fixed;
+    top: 62.5%;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 2.4em;
+  }
+
+  #p5div {
+    overflow-y: auto;
+  }
+
+  .no-padding {
+    padding: none;
+    margin: none;
+  }
+
+  @media (min-width: 576px) {
+    #p5div img {
+      min-width: 100%;
+      max-height: 100%;
+      font-size: 1.8em;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    #p5div img {
+      max-width: 50%;
+      max-height: 100%;
+      font-size: 2.0em;
+    }
+  }
+
+  @media (min-width: 992px) {
+    #p5div img {
+      max-width: 33%;
+      max-height: 100%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #p5div img {
+      min-width: 25%;
+      max-height: 100%;
+    }
+  }
