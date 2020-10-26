@@ -5,20 +5,12 @@ let numImgs = 10;
 let cyanoButton;
 let metadata;
 
-let metaDiv;
-let isoDate;
 let dateContainer;
 let timeContainer;
-let dd, mm, yyyy;
-// let hh, min, mer;
-let formattedD;
-let formattedT;
 
 let buttonWidth;
 let buttonHeight;
 let cols = 4;
-let ratio;
-let gutter = 16;
 
 function preload() {
   metadata = loadJSON('assets/metadata.json', loadCyanotypes);
@@ -28,39 +20,26 @@ function setup() {
   noCanvas();
   
   container = select('#p5div');
-  metaDiv = select('#metadata');
   timeContainer = select('#time');
   dateContainer = select('#date');
 
   setupCyanoButtons();
 
   for (let i = 0; i < cyanotypes.length; i++) {
-    // cyanoButtons[i].img.mouseClicked(printMetadata(i));
     cyanoButtons[i].img.mouseClicked(setMetadata(i));
     cyanoButtons[i].img.parent(container);
-    // cyanoButtons[i].resizeButton();
   }
 
   buttonWidth = container.width / cols;
-  // ratio = buttonWidth / cyanotypes[0].size().height;
-  // buttonHeight = cyanotypes[0].size().width * ratio;
-  // console.log();
-  // console.log(cyanotypes[0].width);
-  // console.log(buttonWidth + ", " + buttonHeight);
 }
 
 function draw() {
-  // cyanoButtons[0].resizeButton();
-  // console.log(cyanotypes[0].size());
-  // console.log(metadata.metadata[0].startTime);
 }
 
 function loadCyanotypes() {
   for (let i = 0; i < numImgs; i++)
   {
     cyanotypes[i] = createImg('./assets/cyanotypes/' + metadata.metadata[i].filename, 'test', '', printSize(i));
-    // cyanotypes[i].size(200, 200);
-    // console.log(cyanoButtons[i].img.size());
   }
 }
 
@@ -68,7 +47,6 @@ function printSize(index) {
   return function() {
     ratio = buttonWidth / cyanotypes[index].size().width;
     buttonHeight = cyanotypes[index].size().height * ratio;
-    // cyanotypes[index].size(buttonWidth, buttonHeight);
   }
 }
 
@@ -76,20 +54,6 @@ function printMetadata(index) {
   return function() {
     let d = new Date(cyanoButtons[index].startTime);
     console.log(d);
-    // dd = d.getDate();
-    // mm = d.getMonth()+1;
-    // yyyy = d.getFullYear();
-
-    // if (dd < 10) {
-    //   dd = '0'+dd;
-    // }
-
-    // if (mm < 10) {
-    //   mm = '0'+mm;
-    // }
-
-    // let formatted = mm+'/'+dd+'/'+yyyy;
-    // console.log(formatted);
   }
 }
 
