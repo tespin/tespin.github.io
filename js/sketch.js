@@ -24,9 +24,11 @@ function setup() {
   dateContainer = select('#date');
 
   setupCyanoButtons();
+  cursor(HAND);
 
   for (let i = 0; i < cyanotypes.length; i++) {
     cyanoButtons[i].img.mouseClicked(setMetadata(i));
+    // cyanoButtons[i].img.mouseOver(changeCursor);
     cyanoButtons[i].img.parent(container);
   }
 
@@ -41,6 +43,15 @@ function loadCyanotypes() {
   {
     cyanotypes[i] = createImg('./assets/cyanotypes/' + metadata.metadata[i].filename, 'test', '', printSize(i));
   }
+}
+
+function changeCursor() {
+  cursor(HAND);
+  // console.debug('over');
+  // return function() {
+  //   // cursor(HAND);
+  //   console.debug("over");
+  // }
 }
 
 function printSize(index) {

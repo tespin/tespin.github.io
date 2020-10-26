@@ -38,6 +38,10 @@ html, body {
     overflow-y: auto;
   }
 
+  #p5div img {
+    cursor: pointer;
+  }
+
   .no-padding {
     padding: none;
     margin: none;
