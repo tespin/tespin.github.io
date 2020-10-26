@@ -12,6 +12,8 @@ let buttonWidth;
 let buttonHeight;
 let cols = 4;
 
+let clicked;
+
 function preload() {
   metadata = loadJSON('assets/metadata.json', loadCyanotypes);
 }
@@ -24,11 +26,9 @@ function setup() {
   dateContainer = select('#date');
 
   setupCyanoButtons();
-  cursor(HAND);
 
   for (let i = 0; i < cyanotypes.length; i++) {
     cyanoButtons[i].img.mouseClicked(setMetadata(i));
-    // cyanoButtons[i].img.mouseOver(changeCursor);
     cyanoButtons[i].img.parent(container);
   }
 
@@ -36,6 +36,11 @@ function setup() {
 }
 
 function draw() {
+  if (!clicked) {
+    dateContainer.html(getFormattedDate(new Date()));
+    timeContainer.html(getFormattedTime(new Date()));
+  }
+  else {}
 }
 
 function loadCyanotypes() {
@@ -43,15 +48,6 @@ function loadCyanotypes() {
   {
     cyanotypes[i] = createImg('./assets/cyanotypes/' + metadata.metadata[i].filename, 'test', '', printSize(i));
   }
-}
-
-function changeCursor() {
-  cursor(HAND);
-  // console.debug('over');
-  // return function() {
-  //   // cursor(HAND);
-  //   console.debug("over");
-  // }
 }
 
 function printSize(index) {
@@ -70,6 +66,7 @@ function printMetadata(index) {
 
 function setMetadata(index) {
   return function() {
+    clicked = true;
     let start = new Date(cyanoButtons[index].startTime);
     let end = new Date(cyanoButtons[index].endTime);
 
@@ -143,11 +140,6 @@ class CyanoButton {
     this.startTime = startTime;
     this.endTime = endTime;
     this.caption = caption;
-  }
-  
-  display() {
-    this.img.position(this.x, this.y);
-    this.img.style('width', '10%');
   }
 
   printSize() {
