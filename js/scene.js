@@ -59,19 +59,75 @@ ground.position.y = -2;
 ground.rotation.x = -1.54;
 scene.add(ground);
 
+// let start;
+// let msSinceMidnight;
+// let timer = function() {
+  // all of this stuff would change to whatever date gets clicked
+  // let current = new Date();
+  // let midnight = new Date().setHours(0, 0, 0, 0);
+  // msSinceMidnight = current - midnight;
+
+  // start = activeStart.getTime();
+  // let interval = activeEnd.getTime() - activeStart.getTime();
+  // let elapsed = current.getTime() - start;
+  // let midnight = current.setHours(0, 0, 0, 0);
+  // if (activeStart != undefined && activeEnd != undefined) {
+  //   start = activeStart.getTime();
+  //   let interval = activeStart.getTime() - activeEnd.getTime();
+  //   elapsed = current.getTime() - start;
+
+  //   if (elapsed > interval) {
+  //     start = current;
+  //   }
+
+  //   console.log(start);
+  // }
+  // console.log(midnight);
+//   console.log(msSinceMidnight);
+// }
+// timer();
+let then;
+let timer = function() {
+  // let elapsed = new Date().getTime() - newStart;
+  // console.log(elapsed);
+  // let start = activeStart.getTime();
+  // let midnight = 
+  // console.log(diff);
+}
+
 let calcSun = function() {
   requestAnimationFrame(calcSun);
+  // timer();
   let lat = 34.1
   let long = -118.4
   let radius = 5;
+  let now = new Date().getTime();
 
   let sunPos = SunCalc.getPosition(new Date(), lat, long);
-  if (activeStart != undefined) {
+  if (activeStart != undefined && activeEnd != undefined) {
+      let interval = activeEnd.getTime() - activeStart.getTime();
+      let currentCounter = new Date().getTime() - (activeStart.getTime() + diff);
+      let t = currentCounter%interval + activeStart.getTime();
+      // let intervalsPassed = Math.floor(currentCounter / interval);
+      // then = midnight + ((intervalsPassed+1) * interval);
+      // console.log(newStart);
+      // console.log(intervalsPassed);
+      console.log(new Date(t));
+      // console.log(new Date().getTime() - then);
+      // console.log(new Date(now - then));
+      // console.log(new Date(interval));
+      timer();
+
       sunPos = SunCalc.getPosition(activeStart, lat, long)
+      // console.log(activeStart.getTime() + ", " + activeEnd.getTime());
+      // let test = activeStart.getTime();
+      // console.log(activeStart + ", " + test);
+      // console.log(new Date().getTime() - activeStart.getTime());
   } else {
     sunPos = SunCalc.getPosition(new Date(), lat, long);
   }
   // console.log(sunPos);
+  // console.log(new Date().getTime());
 
   let lightX = radius * Math.cos(sunPos.azimuth + Math.PI) * Math.sin(sunPos.altitude);
   let lightY = radius * Math.sin(sunPos.azimuth + Math.PI) * Math.sin(sunPos.altitude);

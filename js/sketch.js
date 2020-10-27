@@ -16,6 +16,9 @@ let cols = 4;
 
 let clicked;
 
+let diff;
+let midnight;
+
 function preload() {
   metadata = loadJSON('assets/metadata.json', loadCyanotypes);
 }
@@ -73,6 +76,11 @@ function setMetadata(index) {
     clicked = true;
     let start = new Date(cyanoButtons[index].startTime);
     let end = new Date(cyanoButtons[index].endTime);
+
+    diff = new Date().getTime() - start.getTime();
+    midnight = new Date(start);
+    midnight.setHours(0, 0, 0, 0);
+    console.log(midnight);
 
     dateContainer.html(getFormattedDate(start));
     timeContainer.html(getFormattedTime(start) + " - " + getFormattedTime(end));
