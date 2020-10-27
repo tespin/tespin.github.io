@@ -78,9 +78,6 @@ function setMetadata(index) {
     let end = new Date(cyanoButtons[index].endTime);
 
     diff = new Date().getTime() - start.getTime();
-    midnight = new Date(start);
-    midnight.setHours(0, 0, 0, 0);
-    console.log(midnight);
 
     dateContainer.html(getFormattedDate(start));
     timeContainer.html(getFormattedTime(start) + " - " + getFormattedTime(end));
