@@ -4,6 +4,8 @@ let numImgs = 10;
 
 let cyanoButton;
 let metadata;
+let activeStart;
+let activeEnd;
 
 let dateContainer;
 let timeContainer;
@@ -39,6 +41,8 @@ function draw() {
   if (!clicked) {
     dateContainer.html(getFormattedDate(new Date()));
     timeContainer.html(getFormattedTime(new Date()));
+
+    activeStart = new Date();
   }
   else {}
 }
@@ -72,6 +76,9 @@ function setMetadata(index) {
 
     dateContainer.html(getFormattedDate(start));
     timeContainer.html(getFormattedTime(start) + " - " + getFormattedTime(end));
+
+    activeStart = start;
+    activeEnd = end;
   }
 }
 

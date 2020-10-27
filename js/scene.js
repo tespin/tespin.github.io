@@ -18,7 +18,7 @@ renderer.shadowMap.enabled = true;
 container.appendChild(renderer.domElement);
 
 let dirColor = new THREE.Color("hsl(209, 98%, 41%)");
-let light = new THREE.DirectionalLight(dirColor, 2);
+let light = new THREE.DirectionalLight(dirColor, 5);
 let helper = new THREE.DirectionalLightHelper(light, 5);
 light.castShadow = true;
 light.position.set(0, 2, 0);
@@ -36,8 +36,6 @@ hemisphere.position.set(0, 150, 0);
 let loader;
 loader = new OBJLoader();
 loader.load('assets/obj/toy-fox.obj', function (obj) {
-    // obj.s
-    // scene.add(obj);
 });
 
 let geometry = new THREE.BoxGeometry(1, 1, 1);
@@ -51,7 +49,7 @@ scene.add(cube);
 light.target = cube;
 // scene.add(light.target);
 
-let groundGeom = new THREE.PlaneGeometry(5, 5, 1, 1);
+let groundGeom = new THREE.PlaneGeometry(10, 10, 1, 1);
 let groundMat = new THREE.MeshLambertMaterial({color: 0x00ff00});
 let ground = new THREE.Mesh(groundGeom, groundMat);
 ground.position.set(0, 5, 0);
@@ -60,6 +58,30 @@ ground.material.side = THREE.DoubleSide;
 ground.position.y = -2;
 ground.rotation.x = -1.54;
 scene.add(ground);
+
+let calcSun = function() {
+  requestAnimationFrame(calcSun);
+  let lat = 34.1
+  let long = -118.4
+  let radius = 5;
+
+  let sunPos = SunCalc.getPosition(new Date(), lat, long);
+  if (activeStart != undefined) {
+      sunPos = SunCalc.getPosition(activeStart, lat, long)
+  } else {
+    sunPos = SunCalc.getPosition(new Date(), lat, long);
+  }
+  // console.log(sunPos);
+
+  let lightX = radius * Math.cos(sunPos.azimuth + Math.PI) * Math.sin(sunPos.altitude);
+  let lightY = radius * Math.sin(sunPos.azimuth + Math.PI) * Math.sin(sunPos.altitude);
+  let lightZ = radius * Math.cos(sunPos.altitude);
+  lightX += 0.01;
+
+  light.position.set(lightX, lightY, lightZ);
+}
+
+calcSun();
 
 let render = function() {
   requestAnimationFrame(render);
