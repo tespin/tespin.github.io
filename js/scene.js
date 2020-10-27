@@ -66,7 +66,7 @@ let calcSun = function() {
   let lat = 34.1
   let long = -118.4
   let radius = 5;
-  let rate = 12.0;
+  let rate = 20.0;
 
   let sunPos = SunCalc.getPosition(new Date(), lat, long);
   if (activeStart != undefined && activeEnd != undefined) {
@@ -75,6 +75,7 @@ let calcSun = function() {
       currentCounter = Math.ceil(currentCounter * rate);
       let t = currentCounter%interval + activeStart.getTime();
       let cyanoTime = new Date(t);
+      console.log(new Date(t));
       // console.log(new Date(t));
       // console.log(Math.ceil(currentCounter * 1.50));
 
@@ -97,7 +98,6 @@ calcSun();
 
 let render = function() {
   requestAnimationFrame(render);
-
 
   // cube.rotation.x += 0.02;
   // cube.rotation.y += 0.02;
