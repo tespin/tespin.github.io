@@ -7,7 +7,10 @@ let map = function(value, istart, istop, ostart, ostop) {
 let container = document.getElementById('threejsDiv');
 
 let scene = new THREE.Scene();
-let cam = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+let cam = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 10000);
+// let cam = new THREE.OrthographicCamera(0, container.clientWidth, 0, container.clientHeight, 0.1, 10000);
+cam.position.set(0, 0, 10);
+scene.add(cam);
 
 let renderer = new THREE.WebGLRenderer();
 renderer.setSize(container.clientWidth, container.clientHeight);
@@ -15,10 +18,12 @@ renderer.shadowMap.enabled = true;
 container.appendChild(renderer.domElement);
 
 let dirColor = new THREE.Color("hsl(209, 98%, 41%)");
-let light = new THREE.DirectionalLight(dirColor);
+let light = new THREE.DirectionalLight(dirColor, 2);
+let helper = new THREE.DirectionalLightHelper(light, 5);
 light.castShadow = true;
-light.position.set(0, 100, 200);
+light.position.set(0, 2, 0);
 scene.add(light);
+scene.add(helper);
 
 let hemisphere = new THREE.HemisphereLight(0xffffff, 0xffffff, 1.3);
 let col = new THREE.Color("hsl(210, 60%, 53%)");
@@ -26,30 +31,45 @@ let groundCol = new THREE.Color("hsl(210, 98%, 33$");
 hemisphere.color = col;
 hemisphere.groundColor = groundCol;
 hemisphere.position.set(0, 150, 0);
-scene.add(hemisphere);
+// scene.add(hemisphere);
 
 let loader;
 loader = new OBJLoader();
 loader.load('assets/obj/toy-fox.obj', function (obj) {
-    obj.s
-    scene.add(obj);
+    // obj.s
+    // scene.add(obj);
 });
 
 let geometry = new THREE.BoxGeometry(1, 1, 1);
-let material = new THREE.MeshLambertMaterial({
+let material = new THREE.MeshPhongMaterial({
   color: 0x00ff00
 });
 let cube = new THREE.Mesh(geometry, material);
-scene.castShadow = true;
+cube.castShadow = true;
+cube.position.x -= 1;
 scene.add(cube);
+light.target = cube;
+// scene.add(light.target);
 
-cam.position.z = 5;
+let groundGeom = new THREE.PlaneGeometry(5, 5, 1, 1);
+let groundMat = new THREE.MeshLambertMaterial({color: 0x00ff00});
+let ground = new THREE.Mesh(groundGeom, groundMat);
+ground.position.set(0, 5, 0);
+ground.receiveShadow = true;
+ground.material.side = THREE.DoubleSide;
+ground.position.y = -2;
+ground.rotation.x = -1.54;
+scene.add(ground);
 
 let render = function() {
   requestAnimationFrame(render);
 
 
-  cube.rotation.x += 0.07;
+  cube.rotation.x += 0.02;
+  cube.rotation.y += 0.02;
+
+  // ground.rotation.x += 0.01;
+  // ground.rotation.y += 0.01;
 
   renderer.render(scene, cam);
 };
