@@ -35,10 +35,10 @@ light.shadow.mapSize.height = 1024;
 light.shadow.bias = -0.0005;
 light.shadow.camera.near = 0.1;
 light.shadow.camera.far = 100;
-light.shadow.camera.bottom = -10;
-light.shadow.camera.top = 10;
-light.shadow.camera.left = -10;
-light.shadow.camera.right = 10;
+light.shadow.camera.bottom = -20;
+light.shadow.camera.top = 20;
+light.shadow.camera.left = -20;
+light.shadow.camera.right = 20;
 scene.add(light);
 // scene.add(helper);
 
@@ -145,7 +145,7 @@ let calcSun = function() {
   // timer();
   let lat = 34.1
   let long = -118.4
-  let radius = 20;
+  let radius = 25;
   let rate = 50.0;
 
   let sunPos = SunCalc.getPosition(new Date(), lat, long);
