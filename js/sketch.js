@@ -9,6 +9,7 @@ let activeEnd;
 
 let dateContainer;
 let timeContainer;
+let captionContainer;
 
 let buttonWidth;
 let buttonHeight;
@@ -29,6 +30,7 @@ function setup() {
   container = select('#p5div');
   timeContainer = select('#time');
   dateContainer = select('#date');
+  captionContainer = select('#caption');
 
   setupCyanoButtons();
 
@@ -55,7 +57,7 @@ function draw() {
 function loadCyanotypes() {
   for (let i = 0; i < numImgs; i++)
   {
-    cyanotypes[i] = createImg('./assets/cyanotypes/' + metadata.metadata[i].filename, '', '', printSize(i));
+    cyanotypes[i] = createImg('./assets/cyanotypes/' + metadata.metadata[i].filename, 'a cyanotype of an orange leaf', '', printSize(i));
   }
 }
 
@@ -83,6 +85,7 @@ function setMetadata(index) {
 
     dateContainer.html(getFormattedDate(start));
     timeContainer.html(getFormattedTime(start) + " - " + getFormattedTime(end));
+    captionContainer.html(cyanoButtons[index].caption);
 
     activeStart = start;
     activeEnd = end;
