@@ -7,7 +7,7 @@ let map = function(value, istart, istop, ostart, ostop) {
 }
 
 let container = document.getElementById('threejsDiv');
-let timeContainer = document.getElementById('#time');
+let timeContainer = document.getElementById('time');
 
 let scene = new THREE.Scene();
 let cam = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 10000);
@@ -119,6 +119,26 @@ scene.add(ground);
 //   cam.lookAt(obj.position);
 // }
 
+let getFormattedHour =  function(date) {
+  let d = new Date(date);
+  let hh = date.getHours();
+  let min = date.getMinutes();
+  let mer = "AM";
+
+  let h = hh;
+  if (h >= 12) {
+    h = hh - 12;
+    mer = "PM";
+  }
+  if (h == 0) {
+    h = 12;
+  }
+  min = min < 10 ? "0" + min : min;
+
+  let formatted = h + ":" + min + " " + mer;
+  return formatted;
+}
+
 let current = new Date();
 let calcSun = function() {
   requestAnimationFrame(calcSun);
@@ -134,6 +154,7 @@ let calcSun = function() {
       let currentCounter = new Date().getTime() - (activeStart.getTime() + diff);
       currentCounter = Math.ceil(currentCounter * rate);
       let t = currentCounter%interval + activeStart.getTime();
+      timeContainer.innerHTML = getFormattedHour(new Date(t));
       let cyanoTime = new Date(t);
       // console.log(new Date(t));
       // console.log(new Date(t));

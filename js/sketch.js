@@ -84,9 +84,8 @@ function setMetadata(index) {
     diff = new Date().getTime() - start.getTime();
 
     dateContainer.html(getFormattedDate(start));
-    timeContainer.html(getFormattedTime(start) + " - " + getFormattedTime(end));
+    // timeContainer.html(getFormattedTime(start) + " - " + getFormattedTime(end));
     captionContainer.html(cyanoButtons[index].caption);
-
     activeStart = start;
     activeEnd = end;
   }
