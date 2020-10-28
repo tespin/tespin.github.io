@@ -66,7 +66,7 @@ let calcSun = function() {
   let lat = 34.1
   let long = -118.4
   let radius = 5;
-  let rate = 20.0;
+  let rate = 40.0;
 
   let sunPos = SunCalc.getPosition(new Date(), lat, long);
   if (activeStart != undefined && activeEnd != undefined) {

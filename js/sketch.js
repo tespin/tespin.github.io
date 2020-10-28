@@ -1,6 +1,6 @@
 let cyanotypes = [];
 let cyanoButtons = [];
-let numImgs = 10;
+let numImgs = 69;
 
 let cyanoButton;
 let metadata;
