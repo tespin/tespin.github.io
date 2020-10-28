@@ -35,10 +35,10 @@ light.shadow.mapSize.height = 1024;
 light.shadow.bias = -0.0005;
 light.shadow.camera.near = 0.1;
 light.shadow.camera.far = 100;
-light.shadow.camera.bottom = -20;
-light.shadow.camera.top = 20;
-light.shadow.camera.left = -20;
-light.shadow.camera.right = 20;
+light.shadow.camera.bottom = -30;
+light.shadow.camera.top = 30;
+light.shadow.camera.left = -30;
+light.shadow.camera.right = 30;
 scene.add(light);
 // scene.add(helper);
 
