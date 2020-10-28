@@ -21,8 +21,8 @@ html, body {
 
   #threejsDiv {
     width: 100%;
-    max-width: 720px;
-    min-height: 643px;
+    max-width: 1080px;
+    min-height: 531px;
     min-width: 424px;
     height: 475px;
   }

@@ -75,7 +75,7 @@ let calcSun = function() {
       currentCounter = Math.ceil(currentCounter * rate);
       let t = currentCounter%interval + activeStart.getTime();
       let cyanoTime = new Date(t);
-      console.log(new Date(t));
+      // console.log(new Date(t));
       // console.log(new Date(t));
       // console.log(Math.ceil(currentCounter * 1.50));
 

@@ -1,6 +1,6 @@
 let cyanotypes = [];
 let cyanoButtons = [];
-let numImgs = 69;
+let numImgs = 77;
 
 let cyanoButton;
 let metadata;
@@ -48,12 +48,14 @@ function draw() {
     activeStart = new Date();
   }
   else {}
+
+  // console.log(new Date(metadata.metadata[69].startTime));
 }
 
 function loadCyanotypes() {
   for (let i = 0; i < numImgs; i++)
   {
-    cyanotypes[i] = createImg('./assets/cyanotypes/' + metadata.metadata[i].filename, 'test', '', printSize(i));
+    cyanotypes[i] = createImg('./assets/cyanotypes/' + metadata.metadata[i].filename, '', '', printSize(i));
   }
 }
 
