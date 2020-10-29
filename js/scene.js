@@ -140,15 +140,18 @@ let calcSun = function() {
   // console.log(sunPos);
   // console.log(new Date().getTime());
 
-  let lightX = radius * Math.cos(sunPos.azimuth + Math.PI) * Math.cos(sunPos.altitude);
-  let lightY = radius * Math.sin(sunPos.azimuth + Math.PI) * Math.cos(sunPos.altitude);
-  let lightZ = radius * Math.sin(sunPos.altitude);
+  // let lightX = radius * Math.cos(sunPos.azimuth + Math.PI) * Math.cos(sunPos.altitude);
+  // let lightY = radius * Math.sin(sunPos.azimuth + Math.PI) * Math.cos(sunPos.altitude);
+  // let lightZ = radius * Math.sin(sunPos.altitude);
 
   // console.log(sunPos.azimuth + Math.PI );
   // console.log(sunPos.altitude);
   // let lightX = radius * Math.sin(sunPos.altitude) * Math.cos(sunPos.azimuth + Math.PI);
   // let lightY = radius * Math.sin(sunPos.altitude) * Math.sin(sunPos.azimuth + Math.PI);
   // let lightZ = radius * Math.cos(sunPos.altitude);
+  let lightX = radius * Math.cos(sunPos.altitude) * Math.cos(sunPos.azimuth + Math.PI);
+  let lightY = radius * Math.cos(sunPos.altitude) * Math.sin(sunPos.azimuth + Math.PI);
+  let lightZ = radius * Math.sin(sunPos.azimuth + Math.PI);
 
   light.position.set(lightX, lightY, lightZ);
 }
