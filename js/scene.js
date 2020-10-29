@@ -1,6 +1,6 @@
 import {OBJLoader} from 'https://unpkg.com/three@0.121.0/examples/jsm/loaders/OBJLoader.js';
 import {MTLLoader} from 'https://unpkg.com/three@0.121.0/examples/jsm/loaders/MTLLoader.js';
-import {OrbitControls} from 'https://unpkg.com/three@0.121.0/examples/jsm/controls/OrbitControls.js';
+// import {OrbitControls} from 'https://unpkg.com/three@0.121.0/examples/jsm/controls/OrbitControls.js';
 
 let map = function(value, istart, istop, ostart, ostop) {
     return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
@@ -19,8 +19,6 @@ let renderer = new THREE.WebGLRenderer();
 renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.BasicShadowMap;
-// renderer.shadowMapSoft = true;
-// renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 container.appendChild(renderer.domElement);
 
 // let controls = new OrbitControls(cam, renderer.domElement);
@@ -53,13 +51,6 @@ hemisphere.groundColor = groundCol;
 hemisphere.position.set(0, 150, 0);
 scene.add(hemisphere);
 
-// let loader;
-// loader = new OBJLoader();
-// loader.load('assets/obj/parent-navel-50.obj', function (obj) {
-//   obj.position.y = -1;
-//   scene.add(obj);
-// });
-
 let obj;
 let mtlLoader = new MTLLoader();
 mtlLoader.setPath('assets/obj/');
@@ -81,10 +72,6 @@ mtlLoader.load('parent-navel-50.obj', function (materials) {
   });
 });
 
-// if (obj != undefined) {
-//   cam.lookAt(obj.position.x, obj.position.y-2, obj.position.z);
-// }
-// cam.lookAt(0, 0, 0);
 cam.lookAt(0, 2, 0);
 
 let geometry = new THREE.BoxGeometry(1, 1, 1);
@@ -107,17 +94,6 @@ ground.material.side = THREE.DoubleSide;
 ground.position.y = -2;
 ground.rotation.x = -1.54;
 scene.add(ground);
-
-// let calcCameraPath = function() {
-//   let x = cam.position.x;
-//   let y = cam.position.y;
-//   let z = cam.position.y;
-
-//   cam.position.x = x * Math.cos(.01) + z * Math.sin(.01);
-//   cam.position.z = z * Math.cos(.01) - x * Math.sin(.01);
-
-//   cam.lookAt(obj.position);
-// }
 
 let getFormattedHour =  function(date) {
   let d = new Date(date);
@@ -156,9 +132,6 @@ let calcSun = function() {
       let t = currentCounter%interval + activeStart.getTime();
       timeContainer.innerHTML = getFormattedHour(new Date(t));
       let cyanoTime = new Date(t);
-      // console.log(new Date(t));
-      // console.log(new Date(t));
-      // console.log(Math.ceil(currentCounter * 1.50));
 
       sunPos = SunCalc.getPosition(cyanoTime, lat, long)
   } else {
@@ -186,17 +159,6 @@ calcSun();
 
 let render = function() {
   requestAnimationFrame(render);
-
-  // controls.update();
-
-  // cube.rotation.x += 0.02;
-  // cube.rotation.y += 0.02;
-
-  // ground.rotation.x += 0.01;
-  // ground.rotation.y += 0.01;
-  if (obj != undefined) {
-    // obj.rotation.y += 0.0007;
-  }
 
   renderer.render(scene, cam);
 };
