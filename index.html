@@ -48,6 +48,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="module" src="js/scene.js"></script>
     <script src="js/sketch.js"></script>
+    <script src="js/okshadow.min.js"></script>
+    <script>
+      $(function() {
+        $('#loading-shadow').okshadow({
+          color: '#ffffff',
+          textShadow: true,
+          xMax: 3,
+          yMax: 1,
+          fuzzMin: 1,
+          fuzzMax: 3,
+        });
+      });
+    </script>
   </body>
 </html>
 
@@ -73,5 +86,6 @@ x reduce tree to something more reasonable
 x create gate + tent structure
 x change displayed time to mapped time
 x add all cyanotypes
-* add loading screen
+x add loading screen
+* remove loading screen when completely faded
 -->
