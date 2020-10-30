@@ -51,13 +51,43 @@ hemisphere.groundColor = groundCol;
 hemisphere.position.set(0, 150, 0);
 scene.add(hemisphere);
 
+let manager = new THREE.LoadingManager();
+manager.onStart = function(url, itemsLoaded, itemsTotal) {
+  console.log('Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+}
+
+
+let loadScreen = document.querySelector('#loading-overlay');
+manager.onLoad = function() {
+  loadScreen.classList.add('loading-overlay-hidden');
+  console.log('Loading complete!');
+  // console.log($(loadScreen).css('opacity'));
+  // console.log(window.getComputedStyle(loadScreen).getPropertyValue("opacity"));
+}
+// console.log(loadScreen.css('opacity'));
+// if (loadScreen.style.opacity = '0') {
+//   console.log("opacity is 0");
+// }
+
+manager.onProgress = function (object, itemsLoaded, itemsTotal) {
+  if (object.lengthComputable) {
+    let percentComplete = object.loaded / object.total * 100;
+    console.log('model ' + Math.round(percentComplete, 2) + '% downloaded');
+  }
+  // console.log('Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+}
+
+manager.onError = function(url) {
+  console.log('There was an error loading ' + url);
+}
+
 let obj;
-let mtlLoader = new MTLLoader();
+let mtlLoader = new MTLLoader(manager);
 mtlLoader.setPath('assets/obj/');
 mtlLoader.load('parent-navel-50.obj', function (materials) {
   materials.preload();
 
-  let objLoader = new OBJLoader();
+  let objLoader = new OBJLoader(manager);
   objLoader.setMaterials(materials);
   objLoader.setPath('assets/obj/');
   objLoader.load('parent-navel-50.obj', function (object) {
@@ -94,6 +124,8 @@ ground.material.side = THREE.DoubleSide;
 ground.position.y = -2;
 ground.rotation.x = -1.54;
 scene.add(ground);
+
+  // console.log(window.getComputedStyle(loadScreen).getPropertyValue("opacity"));
 
 let getFormattedHour =  function(date) {
   let d = new Date(date);
