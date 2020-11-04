@@ -1,127 +1,57 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  body {
-    /* display: flex; */
-    background: #000000;
-    font-size: 62.5%;
-  }
-  canvas {
-    display: block;
-    /* width: 100%;
-    height: auto; */
-  }
-  #threejsDiv canvas {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
+@font-face {
+	font-family: FavoritBook;
+	src: url('../assets/fonts/ABCFavorit-Book-Trial.otf');
+}
 
-  #threejsDiv {
-    width: 100%;
-    max-width: 1080px;
-    max-height: 55%;
-    /* min-height: 272px; */
-    min-width: 424px;
-  }
-  #metadata {
-    position: fixed;
-    /* background-color: black; */
-    /* top: 62%; */
-    bottom: 0;
-    z-index: 1;
-    color: #ffffff;
-    font-size: 2.4em;
-  }
+body {
+	/*background-color: #000000;*/
+	font-family: FavoritBook;
+	color: white;
+	font-size: 2.4em;
+}
 
-  #p5div {
-    overflow-y: auto;
-  }
+h1 {
+	/*font-family: "Bennet Ban Ex Cond Ex Bd", serif;*/
+}
 
-  #p5div img {
-    cursor: pointer;
-  }
+.region-content {
+	font-size: 0.6em;
+	top: 290pt;
+	width: 320pt;
+	left: 14pt;
+}
 
-  .no-padding {
-    padding: none;
-    margin: none;
-  }
+.region-content #titlePage {
+	font-family: "Bennet Ban Ex Cond Ex Bd", serif;
+	position: absolute;
+	font-size: 0.7em;
+	bottom: 204pt;
+}
 
-  #loading-overlay {
-    position: absolute;
-    background-color: #003153;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    /* transition: 1s opacity; */
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -ms-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
+#titlePage #author {
+	font-family: "Bennet Ban Cond Lt", serif;
+	font-weight: lighter;
+	position: absolute;
+	width: 148pt;
+	font-size: 0.8em;
+	bottom: 40pt;
+}
 
-    opacity: 1;
-    color: white;
-    font-size: 2.2em;
-  }
+img {
+	width: 100%;
+	height: 100%;
+}
 
-  .loading-overlay-hidden {
-    opacity: 0!important;
-    pointer-events: none;
-    /* display: none!important; */
-  }
+.📖-page-background {
+	background-color: #003153;
+}
 
-  @media (min-width: 372px) {
-    #p5div img {
-      min-width: 100%;
-      max-height: 100%;
-      font-size: 1.8em;
-    }
-    #threejsDiv {
-      /* height: 33%; */
-      min-height: 272px;
-    }
-    #metadata {
-      /* top: 84%; */
-      /* top: 25%; */
-      top: 62.5%;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    #p5div img {
-      max-width: 50%;
-      max-height: 100%;
-      font-size: 2.0em;
-    }
-    #threejsDiv {
-      /* height: 50%; */
-      /* min-height: 484px; */
-      min-height: 400px;
-    }
-    #metadata {
-      /* top: 62%; */
-    }
-  }
+.📖-zoom-content,
+.📖-root {
+	background-color: black!important;
+}
 
-  @media (min-width: 992px) {
-    #p5div img {
-      max-width: 33%;
-      max-height: 100%;
-    }
-    #metadata {
-      /* top: 75%; */
-      top: 72%;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    #p5div img {
-      min-width: 25%;
-      max-height: 100%;
-    }
-  }
+div.📖-select-wrap,
+button {
+	display: none !important;
+}
