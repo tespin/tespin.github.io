@@ -5,7 +5,8 @@
 
 body {
 	/*background-color: #000000;*/
-	font-family: FavoritBook;
+	/* font-family: FavoritBook; */
+	font-family: "Bennet Ban Cond Lt", serif;
 	color: white;
 	font-size: 2.4em;
 }
@@ -22,14 +23,14 @@ h1 {
 }
 
 .region-content #titlePage {
-	font-family: "Bennet Ban Ex Cond Ex Bd", serif;
+	/* font-family: FavoritBook, serif; */
 	position: absolute;
 	font-size: 0.7em;
 	bottom: 204pt;
 }
 
 #titlePage #author {
-	font-family: "Bennet Ban Cond Lt", serif;
+	/* font-family: "Bennet Ban Cond Lt", serif; */
 	font-weight: lighter;
 	position: absolute;
 	width: 148pt;
