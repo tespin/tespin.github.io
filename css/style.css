@@ -1,12 +1,28 @@
 @font-face {
+	font-family: FavoritLight;
+	src: url('../assets/fonts/ABCFavorit-Light-Trial.otf');
+}
+
+@font-face {
 	font-family: FavoritBook;
 	src: url('../assets/fonts/ABCFavorit-Book-Trial.otf');
+}
+
+@font-face {
+	font-family: SuperiorRegular;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-Regular.otf');
+}
+
+@font-face {
+	font-family: SuperiorLight;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-Light.otf');
 }
 
 body {
 	/*background-color: #000000;*/
 	/* font-family: FavoritBook; */
-	font-family: "Bennet Ban Cond Lt", serif;
+	font-family: SuperiorLight, serif;
+	letter-spacing: 0.03em;
 	color: white;
 	font-size: 2.4em;
 }
@@ -23,19 +39,23 @@ h1 {
 }
 
 .region-content #titlePage {
-	/* font-family: FavoritBook, serif; */
+	font-family: SuperiorRegular, sans-serif;
+	letter-spacing: 0.1em;
 	position: absolute;
 	font-size: 0.7em;
-	bottom: 204pt;
+	bottom: 232pt;
 }
 
 #titlePage #author {
 	/* font-family: "Bennet Ban Cond Lt", serif; */
-	font-weight: lighter;
+	font-family: FavoritLight, sans-serif;
+	/* font-weight: lighter; */
 	position: absolute;
 	width: 148pt;
-	font-size: 0.8em;
-	bottom: 40pt;
+	font-size: 0.7em;
+	letter-spacing: 0.2em;
+	/* bottom: 20pt; */
+	top: 40pt;
 }
 
 img {
