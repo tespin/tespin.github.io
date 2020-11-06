@@ -17,6 +17,8 @@
         </div>
         <h1>Perennial</h1>
       </div>
+      <div class="break"></div>
+      <div class="break"></div>
       <p>a close up of a plant in a garden</p>
       <img src="assets/001.jpg" alt="cyanotype">
       <p>a small plane flying over a body of water</p>
@@ -102,6 +104,10 @@
         Bindery.PageBreak({
           selector: 'p',
           position: 'before'
+        }),
+        Bindery.PageBreak({
+          selector: '.break',
+          position: 'both'
         }),
         Bindery.RunningHeader({
           render: (page) => {

@@ -19,16 +19,10 @@
 }
 
 body {
-	/*background-color: #000000;*/
-	/* font-family: FavoritBook; */
 	font-family: SuperiorLight, serif;
 	letter-spacing: 0.03em;
 	color: white;
 	font-size: 2.4em;
-}
-
-h1 {
-	/*font-family: "Bennet Ban Ex Cond Ex Bd", serif;*/
 }
 
 .region-content {
@@ -48,7 +42,7 @@ h1 {
 
 #titlePage #author {
 	/* font-family: "Bennet Ban Cond Lt", serif; */
-	font-family: FavoritLight, sans-serif;
+	font-family: SuperiorLight, sans-serif;
 	/* font-weight: lighter; */
 	position: absolute;
 	width: 148pt;
@@ -69,10 +63,10 @@ img {
 
 .📖-zoom-content,
 .📖-root {
-	background-color: black!important;
+	/* background-color: black!important; */
 }
 
 div.📖-select-wrap,
 button {
-	display: none !important;
+	/* display: none !important; */
 }
