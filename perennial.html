@@ -113,9 +113,9 @@
           render: (page) => {
             if (page.isEmpty || page.number <= 1) return '';
             if (page.isRight) {
-              return `${page.number}`;
+              return `${page.number-3}`;
             } else if (page.isLeft) {
-              return `${page.number}`;
+              return `${page.number-3}`;
             }
           }
         }),
