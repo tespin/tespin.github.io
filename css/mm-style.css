@@ -1,14 +1,26 @@
+@font-face {
+	font-family: FavoritLight;
+	src: url('../assets/fonts/ABCFavorit-Light-Trial.otf');
+}
+
+@font-face {
+	font-family: FavoritBook;
+	src: url('../assets/fonts/ABCFavorit-Book-Trial.otf');
+}
+
 body {
+	font-family: FavoritBook, serif;
 	font-size: 2.4em;
 }
 
 .gentext {
 	position: relative;
 	top: 20pt;
+	left: 36pt;
 }
 
 .gentext p {
-	font-family: Helvetica, serif;
+	font-family: FavoritLight, serif;
 	font-size: 0.36em;
 	writing-mode: vertical-rl;
 	transform: scale(-1);

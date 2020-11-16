@@ -12,6 +12,12 @@
   		<div>
   			cover
   		</div>
+  		<div class="about">
+  			<p>This is a project of transition.</p>
+  		</div>
+  		<div class="about">
+  			<p>a test</p>
+  		</div>
 	  	<div class="grid">
 	  		<img src="assets/stview/0000.jpg" alt="stview">
 	  		<img src="assets/stview/0001.jpg" alt="stview">
@@ -39,7 +45,7 @@
 	  	</div>
 	  	<div class="gentext">
 	  		<p>Cathedrals were better, extensively introducing a similar vehiculars. Blur plays were adjacent.</p>
-	  		<p>They partially brought a single painting, a French itself and half.</p>
+	  		<p>They partially brought a single painting, a Jewish itself and half.</p>
 	  		<p>The visibly, proportionately defining a carved transitional. The wide very existed.</p>
 	  	</div>
 	  	<div class="grid">
@@ -49,8 +55,8 @@
 	  	</div>
 	  	<div class="gentext">
 	  		<p>The wide and herring were curved, missing an incompatible form</p>
-	  		<p>pertaining a belonging. They roughly prevailed, besides the nuclear. Joining itself above.</p>
-	  		<p>The balcony far back from outside decimated using Greek paintings.</p>
+	  		<p>Pertaining a belonging. They roughly prevailed, besides the nuclear. Joining itself above.</p>
+	  		<p>The balcony far back from outside decimated using Greek paintings. Closely, the meeting is spatial.</p>
 	  	</div>
 	  	<div class="grid">
 	  		<img src="assets/stview/0012.jpg" alt="stview">
@@ -61,6 +67,56 @@
 	  		<p>Existing divided altogether, the best protective likely set since the educational. The public and conical were stronger.</p>
 	  		<p>The technological dominant probably emerged, notwithstanding the flush.</p>
 	  		<p>Above the attempt, out the approximate. Square characteristics were uncovered.</p>
+	  	</div>
+	  	<div class="grid">
+	  		<img src="assets/stview/0015.jpg" alt="stview">
+	  		<img src="assets/stview/0016.jpg" alt="stview">
+	  		<img src="assets/stview/0017.jpg" alt="stview">
+	  	</div>
+	  	<div class="gentext">
+	  		<p>Colonial structures second reinforced. The solar contributors perhaps specified.</p>
+	  		<p>The proportionate unfortunately is belonging a preferably, the architectural. Dates were newer covering a cantilevered existing.</p>
+	  		<p>Unlike the rising, topographic were gentlest. French architecturally happened with the overall.</p>
+	  	</div>
+	  	<div class="grid">
+	  		<img src="assets/stview/0018.jpg" alt="stview">
+	  		<img src="assets/stview/0019.jpg" alt="stview">
+	  		<img src="assets/stview/0020.jpg" alt="stview">
+	  	</div>
+	  	<div class="gentext">
+	  		<p>Postwar and institutional arrived, newly understood behind the functioning. Rectangular cathedrals are likely.</p>
+	  		<p>Unlike the exterior, formal comprehensive was more. The plays are involving a decomposed spanning.</p>
+	  		<p>The personal was far beginning a newly, the solar. Solid herring is beautiful. Basic negatives regardless achieved.</p>
+	  	</div>
+	  	<div class="grid">
+	  		<img src="assets/stview/0021.jpg" alt="stview">
+	  		<img src="assets/stview/0022.jpg" alt="stview">
+	  		<img src="assets/stview/0023.jpg" alt="stview">
+	  	</div>
+	  	<div class="gentext">
+	  		<p>The functioning at all is installing an importantly, the accessory. Simple thus was earlier. The blur and herein were consequently paralleling a paned flutings.</p>
+	  		<p>Around the sloping, good and dental were purer. The chronological is groundbreaking an occurred originally.</p>
+	  		<p>Guidelines were deteriorated. Notwithstanding the with, rectangular was wider. Whereas the influx, respects were smaller.</p>
+	  	</div>
+	  	<div class="grid">
+	  		<img src="assets/stview/0024.jpg" alt="stview">
+	  		<img src="assets/stview/0025.jpg" alt="stview">
+	  		<img src="assets/stview/0026.jpg" alt="stview">
+	  	</div>
+	  	<div class="gentext">
+	  		<p>Left personals were recessed. Elaborate accessory was allowed. The alternative still is establishing a white painting.</p>
+	  		<p>Along the broad, true mechanical was larger. Maybe, the hung and world are grandiose.</p>
+	  		<p>The live selectively is conforming an educational meeting. The local including is filling a final nuclear.</p>
+	  	</div>
+	  	<div class="grid">
+	  		<img src="assets/stview/0027.jpg" alt="stview">
+	  		<img src="assets/stview/0028.jpg" alt="stview">
+	  		<img src="assets/stview/0029.jpg" alt="stview">
+	  	</div>
+	  	<div class="gentext">
+	  		<p>Shall the larger - wide is darker. Outside, the incorporate and infill previously financed.</p>
+	  		<p>Geometric good was meandered. Decorative back from the facing was stressed.</p>
+	  		<p>Block true is concrete. Articulated blur was older, supporting the wider flat medieval.</p>
 	  	</div>
 	 </div>
   </body>
@@ -82,9 +138,13 @@
           selector: '.grid',
           position: 'both'
         }),
+        Bindery.PageBreak({
+          selector: '.about',
+          position: 'both'
+        }),
         Bindery.RunningHeader({
           render: (page) => {
-            if (page.isEmpty || page.number <= 1) return '';
+            if (page.isEmpty || page.number-3 <= 0) return '';
             if (page.isRight) {
               return `${page.number-3}`;
             } else if (page.isLeft) {
