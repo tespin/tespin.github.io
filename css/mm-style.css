@@ -13,6 +13,10 @@ body {
 	font-size: 2.4em;
 }
 
+.about {
+	font-size: 0.4em;
+}
+
 .gentext {
 	position: relative;
 	top: 20pt;
@@ -20,7 +24,7 @@ body {
 }
 
 .gentext p {
-	font-family: FavoritLight, serif;
+	/*font-family: FavoritLight, serif;*/
 	font-size: 0.36em;
 	writing-mode: vertical-rl;
 	transform: scale(-1);
