@@ -4,9 +4,70 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/mm-style.css">
     <title>Miracle Miles</title>
   </head>
   <body>
-  	<p>testingggggg</p>
+  	<div class="grid">
+  		imagine grid
+  	</div>
+  	<p>testi</p>
+  	<div class="grid">
+  		imagine grid
+  	</div>
+  	<p>testn</p>
+  	<div class="grid">
+  		imagine grid
+  	</div>
+  	<p>testing</p>
+  	<div class="grid">
+  		imagine grid
+  	</div>
+  	<p>testisdfsd</p>
+  	<div class="grid">
+  		imagine grid
+  	</div>
+  	<p>testinffggg</p
   </body>
+  <script src="https://unpkg.com/bindery"></script>
+  <script>
+    Bindery.makeBook({
+      content: '#content',
+      view: Bindery.View.FLIPBOOK,
+      pageSetup: {
+        size: { width: '4.25in', height: '6.875in' },
+        margin: { top: '0.5in', inner: '0.5in', outer: '0.5in', bottom: '0.5in' },
+      },
+      rules: [
+        Bindery.FullBleedPage({ 
+          selector: 'img',
+          continue: 'next'
+        }),
+        Bindery.PageBreak({
+          selector: 'p',
+          position: 'before'
+        }),
+        Bindery.PageBreak({
+          selector: '.grid',
+          position: 'both'
+        }),
+        Bindery.RunningHeader({
+          render: (page) => {
+            if (page.isEmpty || page.number <= 1) return '';
+            if (page.isRight) {
+              return `${page.number-3}`;
+            } else if (page.isLeft) {
+              return `${page.number-3}`;
+            }
+          }
+        }),
+        // Bindery.RunningHeader({
+        //   render: (pageInfo) => pageInfo.isLeft
+        //     ? `${pageInfo.number} · ${pageInfo.heading.h1}`
+        //     : `${pageInfo.heading.h2} · ${pageInfo.number}`
+        // })
+
+      ],
+    });
+  </script>
 </html>	
