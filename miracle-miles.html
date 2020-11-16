@@ -8,26 +8,37 @@
     <title>Miracle Miles</title>
   </head>
   <body>
-  	<div class="grid">
-  		imagine grid
-  	</div>
-  	<p>testi</p>
-  	<div class="grid">
-  		imagine grid
-  	</div>
-  	<p>testn</p>
-  	<div class="grid">
-  		imagine grid
-  	</div>
-  	<p>testing</p>
-  	<div class="grid">
-  		imagine grid
-  	</div>
-  	<p>testisdfsd</p>
-  	<div class="grid">
-  		imagine grid
-  	</div>
-  	<p>testinffggg</p
+  	<div id="content">
+  		<div>
+  			cover
+  		</div>
+	  	<div class="grid">
+	  		<img src="assets/stview/0002.jpg" alt="stview">
+	  		<img src="assets/stview/0009.jpg" alt="stview">
+	  		<img src="assets/stview/0017.jpg" alt="stview">
+	  	</div>
+	  	<div class="gentext">
+	  		<p>Somewhat reached Outside the characteristic. The distinct uniques was culturally adjoining an address publicly. The heavily, the second and decorative are planning an infill.</p>
+	  		<p>Apartments were simpler extending a family streetcar. Out the belonging, features were highest. Deferential cohesive and simple were greater.</p>
+	  		<p>Original clean was older maintaining a simple cleans. The architecturally, the dating and modern were namely enduring a red original. The north finished. The inappropriate typically is planting a several retaining.</p>
+	  	</div>
+	  	<p>testiii</p>
+	  	<div class="grid">
+	  		imagine grid
+	  	</div>
+	  	<p>testn</p>
+	  	<div class="grid">
+	  		imagine grid
+	  	</div>
+	  	<p>testing</p>
+	  	<div class="grid">
+	  		imagine grid
+	  	</div>
+	  	<p>testisdfsd</p>
+	  	<div class="grid">
+	  		imagine grid
+	  	</div>
+	 </div>
   </body>
   <script src="https://unpkg.com/bindery"></script>
   <script>
@@ -35,16 +46,12 @@
       content: '#content',
       view: Bindery.View.FLIPBOOK,
       pageSetup: {
-        size: { width: '4.25in', height: '6.875in' },
-        margin: { top: '0.5in', inner: '0.5in', outer: '0.5in', bottom: '0.5in' },
+        size: { width: '3in', height: '6.875in' },
+        margin: { top: '0.15in', inner: '0.15in', outer: '0.15in', bottom: '0.15in' },
       },
       rules: [
-        Bindery.FullBleedPage({ 
-          selector: 'img',
-          continue: 'next'
-        }),
         Bindery.PageBreak({
-          selector: 'p',
+          selector: '.gentext',
           position: 'before'
         }),
         Bindery.PageBreak({
