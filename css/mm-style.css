@@ -20,6 +20,8 @@ body {
 
 .about {
 	font-size: 0.6em;
+	position: relative;
+	bottom: 10pt;
 }
 
 .gentext {
