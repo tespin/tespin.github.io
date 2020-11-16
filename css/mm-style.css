@@ -11,6 +11,7 @@
 body {
 	font-family: FavoritBook, serif;
 	font-size: 2.4em;
+	color: #5A5659;
 }
 
 #title {
@@ -58,7 +59,7 @@ body {
 .📖-root {
 	/* background-color: black!important; */
 	/* background-color: #FFF7EB!important; */
-	background-color: #6B6B68;
+	background-color: #6B6B68!important;
 }
 
 div.📖-select-wrap,
