@@ -64,10 +64,10 @@ img {
 .📖-zoom-content,
 .📖-root {
 	/* background-color: black!important; */
-	background-color: #FFF7EB!important;
+	/* background-color: #FFF7EB!important; */
 }
 
 div.📖-select-wrap,
 button {
-	display: none !important;
+	/* display: none !important; */
 }

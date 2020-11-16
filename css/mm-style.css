@@ -1,3 +1,45 @@
 body {
-	
+	font-size: 2.4em;
+}
+
+.gentext {
+	position: relative;
+	top: 30pt;
+}
+
+.gentext p {
+	font-family: Helvetica, serif;
+	font-size: 0.36em;
+	writing-mode: vertical-rl;
+	transform: scale(-1);
+	margin: 30px auto;
+	height: 140px;
+}
+
+.grid {
+	position: relative;
+	top: 27.5pt;
+}
+
+.grid img {
+	display: block;
+	margin: 25px auto;
+	width: 150px;
+	height: 150px;
+	/*vertical-align: middle;*/
+}
+
+.📖-page-background {
+	/*background-color: #003153;*/
+}
+
+.📖-zoom-content,
+.📖-root {
+	/* background-color: black!important; */
+	/* background-color: #FFF7EB!important; */
+}
+
+div.📖-select-wrap,
+button {
+	/* display: none !important; */
 }
