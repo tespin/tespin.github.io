@@ -81,6 +81,16 @@ body {
 	height: 450px;
 }
 
+#custom-04 {
+	position: absolute;
+	bottom: 144pt;
+	left: 24pt;
+}
+
+#custom-04 img {
+
+}
+
 img {
 	width: 100%;
 	height: 100%;
