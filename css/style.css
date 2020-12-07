@@ -9,6 +9,11 @@
 }
 
 @font-face {
+	font-family: SuperiorMedium;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-Medium.otf');
+}
+
+@font-face {
 	font-family: SuperiorRegular;
 	src: url('../assets/fonts/SuperiorTitleTRIAL-Regular.otf');
 }
@@ -32,24 +37,50 @@ body {
 	left: 14pt;
 }
 
-.region-content #titlePage {
+.region-content #frontCover {
 	font-family: SuperiorRegular, sans-serif;
-	letter-spacing: 0.1em;
+	/*letter-spacing: 0.1em;*/
 	position: absolute;
-	font-size: 0.7em;
-	bottom: 232pt;
+	font-size: 0.65em;
+	left: 142pt;
+	bottom: 216pt;
 }
 
-#titlePage #author {
+#frontCover #author {
 	/* font-family: "Bennet Ban Cond Lt", serif; */
 	font-family: SuperiorLight, sans-serif;
 	/* font-weight: lighter; */
 	position: absolute;
 	width: 148pt;
-	font-size: 0.7em;
+	font-size: 0.8em;
 	letter-spacing: 0.2em;
 	/* bottom: 20pt; */
-	top: 40pt;
+	top: 30pt;
+}
+
+#custom-01 {
+	/*display: block;
+	margin-left: 2*/
+	position: absolute;
+	left: 4pt;
+	top: 4pt;
+	/*bottom: 4pt;*/
+}
+
+#custom-01 img {
+	width: 750px;
+	height: 750px;
+}
+
+#custom-02 {
+	position: absolute;
+	left: 274pt;
+	top: 44pt;
+}
+
+#custom-02 img {
+	width: 450px;
+	height: 450px;
 }
 
 img {
@@ -58,7 +89,7 @@ img {
 }
 
 .📖-page-background {
-	background-color: #003153;
+	background-color: #0A2753;
 }
 
 .📖-zoom-content,
