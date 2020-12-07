@@ -2,9 +2,6 @@ docs/html
 docs/tagfile.xml
 docs/*.tag
 
-# images
-*.jpg
-
 # Font stuff
 *.ttf
 *.otf
