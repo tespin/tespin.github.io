@@ -83,12 +83,38 @@ body {
 
 #custom-04 {
 	position: absolute;
-	bottom: 144pt;
-	left: 24pt;
+	bottom: 54pt;
+	right: 172pt;
 }
 
 #custom-04 img {
+	width: 450px;
+	height: 450px;
+}
 
+#custom-05 {
+	position: absolute;
+	bottom: 54pt;
+	left: 172pt;
+}
+
+#custom-05 img {
+	width: 450px;
+	height: 450px;
+}
+
+#custom-06 {
+	position: absolute;
+	bottom: 4pt;
+	/*bottom: 12pt;*/
+	/*left: 12pt;*/
+	/*right: 24pt;*/
+	/*bottom: 36pt;*/
+}
+
+#custom-06 img {
+	width: 1175px;
+	height: 1175px;
 }
 
 img {
