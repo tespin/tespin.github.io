@@ -59,7 +59,7 @@ body {
 }
 
 #custom-01 {
-	position: absolute;
+	position: relative;
 	left: 4pt;
 	top: 4pt;
 	/*bottom: 4pt;*/
@@ -71,7 +71,7 @@ body {
 }
 
 #custom-02 {
-	position: absolute;
+	position: relative;
 	left: 274pt;
 	top: 44pt;
 }
@@ -82,9 +82,9 @@ body {
 }
 
 #custom-04 {
-	position: absolute;
-	bottom: 54pt;
-	right: 172pt;
+	position: relative;
+	left: 374pt;
+	top: 48pt;
 }
 
 #custom-04 img {
@@ -93,9 +93,9 @@ body {
 }
 
 #custom-05 {
-	position: absolute;
-	bottom: 50pt;
-	left: 166pt;
+	position: relative;
+	left: 172pt;
+	top: 68pt;
 }
 
 #custom-05 img {
@@ -118,27 +118,27 @@ body {
 }
 
 #custom-07 {
-	position: absolute;
+	position: relative;
 	left: 30pt;
-	bottom: 36pt;
+	bottom: 248pt;
 }
 
 #custom-07 img {
-	width: 325px;
-	height: 325px;
+	width: 300px;
+	height: 300px;
 }
 
 #custom-08 {
-	position: absolute;
-	left: 124pt;
-	bottom: 24pt;
+	position: relative;
+	left: 224pt;
+	bottom: 288pt;
 	/*top: 24pt;*/
 	/*bottom: 2pt;*/
 }
 
 #custom-08 img {
-	width: 225px;
-	height: 225px;
+	width: 164px;
+	height: 164px;
 }
 
 #custom-09 {
