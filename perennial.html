@@ -27,7 +27,7 @@
   	  </div>
   	  <img src="assets/cyanotypes/018.jpg" class="full-bleed" alt="cyanotype">
   	  <img src="assets/cyanotypes/008.jpg" class="full-bleed" alt="cyanotype">
-  	  <img src="assets/cyanotypes/040.jpg" class="full-bleed" alt="cyanotype">
+  	  <img src="assets/cyanotypes/040a.jpg" class="full-bleed" alt="cyanotype">
   	  <img src="assets/cyanotypes/041.jpg" class="full-bleed" alt="cyanotype">
   	  <div id="custom-01" class="spread">
   	  	<img src="assets/cyanotypes/014.jpg" alt="cyanotype">
@@ -49,6 +49,21 @@
 	  <div id="custom-06" class="spread">
 	  	  <img src="assets/cyanotypes/010.jpg" alt="cyanotype">
 	  </div>
+	  <div id="custom-07">
+		  <img src="assets/cyanotypes/044.jpg" alt="cyanotype">
+	  </div>
+	  <div id="custom-08">
+		  <img src="assets/cyanotypes/045.jpg" alt="cyanotype">
+	  </div>
+	  <!-- div id="custom-09">
+		  <img src="assets/cyanotypes/046.jpg" alt="cyanotype">
+	  </div> -->
+	  <!-- <div id="custom-10">
+		  <img src="assets/cyanotypes/047.jpg" alt="cyanotype">
+		</div>
+	  <div id="custom-11">
+		  <img src="assets/cyanotypes/049.jpg" alt="cyanotype">
+	  </div> -->
   	  <!-- <div id="custom-04">
   	  	<img src="assets/cyanotypes/009.jpg" alt="cyanotype">
   	  </div> -->
@@ -140,24 +155,23 @@
         //   position: 'before'
         // }),
         Bindery.FullBleedSpread({
-        	selector: '.spread',
-        	continue: 'same'
+        	selector: '.spread'
         	// continue: 'next'
         }),
         Bindery.PageBreak({
           selector: '.break',
           position: 'both'
-        }),
-        Bindery.RunningHeader({
-          render: (page) => {
-            if (page.isEmpty || page.number <= 1) return '';
-            if (page.isRight) {
-              return `${page.number-3}`;
-            } else if (page.isLeft) {
-              return `${page.number-3}`;
-            }
-          }
-        }),
+        })
+        // Bindery.RunningHeader({
+        //   render: (page) => {
+        //     if (page.isEmpty || page.number <= 1) return '';
+        //     if (page.isRight && page.number > 0) {
+        //       return `${page.number-3}`;
+        //     } else if (page.isLeft) {
+        //       return `${page.number-3}`;
+        //     }
+        //   }
+        // }),
         // Bindery.RunningHeader({
         //   render: (pageInfo) => pageInfo.isLeft
         //     ? `${pageInfo.number} · ${pageInfo.heading.h1}`
