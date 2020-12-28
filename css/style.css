@@ -99,8 +99,8 @@ body {
 }
 
 #custom-05 img {
-	width: 450px;
-	height: 450px;
+	width: 440px;
+	height: 440px;
 }
 
 #custom-06 {
@@ -119,38 +119,120 @@ body {
 
 #custom-07 {
 	position: relative;
-	left: 30pt;
-	bottom: 248pt;
+	/*bottom: 500pt;*/
+	/*left: 30pt;*/
+	/*bottom: 242pt;*/
 }
 
 #custom-07 img {
-	width: 300px;
-	height: 300px;
-}
-
-#custom-08 {
-	position: relative;
-	left: 224pt;
-	bottom: 288pt;
-	/*top: 24pt;*/
-	/*bottom: 2pt;*/
+	width: 100%;
+	height: 100%;
 }
 
 #custom-08 img {
-	width: 164px;
-	height: 164px;
+	width: 100%;
+	height: 100%;
 }
 
 #custom-09 {
-	position: absolute;
-	left: 30pt;
-	bottom: 24pt;
+	/*position: relative;*/
+	/*left: 200pt;*/
+}
+
+#custom-09 img {
+	width: 100%;
+	height: 100%;
+}
+
+#custom-10 {
+	position: relative;
+	left: 400pt;
+	/*right: 128pt;*/
+	/*bottom: 56pt;*/
+}
+
+#custom-10 img {
+	width: 650px;
+	height: 650px;
+/*	width: 300px;
+	height: 300px;*/
+}
+
+#custom-11 img {
+	width: 100%;
+	height: 100%;
+}
+
+#custom-12 img {
+	width: 100%;
+	height: 100%;
+}
+
+#custom-13 {
+	position: relative;
+	left: 412pt;
+	top: 74pt;
+}
+
+#custom-13 img {
+	width: 390px;
+	height: 390px;
+}
+
+#custom-14 {
+	position: relative;
+	left: 244pt;
+	top: 124pt;
+}
+
+#custom-14 img {
+	width: 380px;
+	height: 380px;
+}
+
+#custom-15 {
+	
+}
+
+#custom-15 img {
+	width: 1200px;
+	height: 1200px;
+}
+
+#custom-16 {
+	position: relative;
+}
+
+#custom-16 img {
+	width: 1200px;
+	height: 1000px;
+}
+
+#custom-17 {
+	position: relative;
+}
+
+#custom-17 img {
+
+}
+
+#custom-18 {
+	position: relative;
+}
+
+#custom-18 img {
+
+}
+/*#custom-09 {
+	position: relative;
+	right: 124pt;
+	bottom: 56pt;
 }
 
 #custom-09 img {
 	width: 225px;
 	height: 225px;
-}
+}*/
 
 img {
 	width: 100%;
