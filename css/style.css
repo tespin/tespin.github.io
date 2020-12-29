@@ -19,8 +19,18 @@
 }
 
 @font-face {
+	font-family: SuperiorRegularItalic;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-RegularItalic.otf');
+}
+
+@font-face {
 	font-family: SuperiorLight;
 	src: url('../assets/fonts/SuperiorTitleTRIAL-Light.otf');
+}
+
+@font-face {
+	font-family: SuperiorLightItalic;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-LightItalic.otf');
 }
 
 body {
@@ -29,6 +39,40 @@ body {
 	color: white;
 	font-size: 2.4em;
 }
+
+#loading-overlay {
+    position: absolute;
+    background-color: #003153;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    /* transition: 1s opacity; */
+    -webkit-transition: opacity 1.5s ease-in-out;
+    -moz-transition: opacity 1.5s ease-in-out;
+    -ms-transition: opacity 1.5s ease-in-out;
+    -o-transition: opacity 1.5s ease-in-out;
+
+    opacity: 1;
+    color: white;
+    font-size: 2.2em;
+  }
+
+#loading-overlay p {
+	text-decoration: underline;
+	cursor: pointer;
+	font-family: SuperiorLightItalic;
+	font-size: 0.3em;
+}
+
+.hide {
+    opacity: 0!important;
+    z-index: -1;
+    pointer-events: none;
+    /* display: none!important; */
+  }
 
 .region-content {
 	font-size: 0.6em;
@@ -56,6 +100,28 @@ body {
 	letter-spacing: 0.2em;
 	/* bottom: 20pt; */
 	top: 30pt;
+}
+
+#intro {
+	position: relative;
+	bottom: 120pt;
+	font-size: 1.0em;
+}
+
+#intro h2 {
+	font-family: SuperiorRegular;
+	font-size: 0.9em;
+}
+
+#intro p {
+	font-family: SuperiorLight;
+	font-size: 0.7em;
+}
+
+#acknow {
+	position: relative;
+	bottom: 136pt;
+	font-size: 0.72em;
 }
 
 #custom-01 {
