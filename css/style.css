@@ -40,6 +40,11 @@ body {
 	font-size: 2.4em;
 }
 
+a:link,
+a:visited {
+	color: #f0b86e;
+}
+
 #loading-overlay {
     position: absolute;
     background-color: #003153;
@@ -87,24 +92,29 @@ body {
 	position: absolute;
 	font-size: 0.65em;
 	left: 142pt;
-	bottom: 216pt;
+	bottom: 200pt;
 }
 
-#frontCover #author {
-	/* font-family: "Bennet Ban Cond Lt", serif; */
-	font-family: SuperiorLight, sans-serif;
-	/* font-weight: lighter; */
-	position: absolute;
-	width: 148pt;
-	font-size: 0.8em;
-	letter-spacing: 0.2em;
-	/* bottom: 20pt; */
-	top: 30pt;
+
+
+#frontCover {
+}
+
+#frontCover h1 {
+	position: relative;
+	top: 10pt;
+}
+
+#frontCover p {
+	font-family: SuperiorLightItalic;
+	position: relative;
+	top: 280pt;
+	right: 8pt;
 }
 
 #intro {
 	position: relative;
-	bottom: 120pt;
+	bottom: 128pt;
 	font-size: 1.0em;
 }
 
@@ -115,7 +125,7 @@ body {
 
 #intro p {
 	font-family: SuperiorLight;
-	font-size: 0.7em;
+	font-size: 0.8em;
 }
 
 #acknow {
@@ -136,6 +146,13 @@ body {
 	height: 750px;
 }
 
+#custom-01 p {
+	position: relative;
+	font-size: 0.52em;
+	bottom: 284pt;
+	left: 596pt;
+}
+
 #custom-02 {
 	position: relative;
 	left: 274pt;
@@ -147,6 +164,17 @@ body {
 	height: 450px;
 }
 
+#custom-03 {
+
+}
+
+#custom-03 p {
+	font-size: 0.52em;
+	position: relative;
+	bottom: 654pt;
+	left: 50pt;
+}
+
 #custom-04 {
 	position: relative;
 	left: 374pt;
@@ -156,6 +184,13 @@ body {
 #custom-04 img {
 	width: 450px;
 	height: 450px;
+}
+
+#custom-04 #excerpts p {
+	font-size: 0.52em;
+	position: relative;
+	bottom: 340pt;
+	right: 156pt;
 }
 
 #custom-05 {
@@ -284,12 +319,26 @@ body {
 
 }
 
+#custom-17 p {
+	font-size: 0.52em;
+	position: relative;
+	bottom: 312pt;
+	left: 84pt;
+}
+
 #custom-18 {
 	position: relative;
 }
 
 #custom-18 img {
 
+}
+
+#custom-18 p {
+	font-size: 0.52em;
+	position: relative;
+	bottom: 136pt;
+	left: 54pt;
 }
 /*#custom-09 {
 	position: relative;
