@@ -45,6 +45,10 @@ a:visited {
 	color: #f0b86e;
 }
 
+#content {
+	/*display: none!important;*/
+}
+
 #loading-overlay {
     position: absolute;
     background-color: #003153;
