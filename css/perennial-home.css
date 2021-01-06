@@ -1,0 +1,52 @@
+@font-face {
+	font-family: SuperiorMedium;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-Medium.otf');
+}
+
+@font-face {
+	font-family: SuperiorRegular;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-Regular.otf');
+}
+
+@font-face {
+	font-family: SuperiorRegularItalic;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-RegularItalic.otf');
+}
+
+@font-face {
+	font-family: SuperiorLight;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-Light.otf');
+}
+
+@font-face {
+	font-family: SuperiorLightItalic;
+	src: url('../assets/fonts/SuperiorTitleTRIAL-LightItalic.otf');
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: #0A2753;
+	font-family: SuperiorLight;
+	font-size: 1.6em;
+	color: white;
+}
+
+.center {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.center p {
+	width: 50%;
+}
+
+a:link,
+a:visited {
+	color: #f0b86e;
+}
