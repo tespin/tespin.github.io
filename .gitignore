@@ -3,7 +3,7 @@ docs/tagfile.xml
 docs/*.tag
 
 # Font stuff
-*.ttf
+#*.ttf
 #*.otf
 
 # Output files
