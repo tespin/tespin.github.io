@@ -1,43 +1,23 @@
 @font-face {
-	font-family: FavoritLight;
-	src: url('../assets/fonts/ABCFavorit-Light-Trial.otf');
+	font-family: PlayfairDisplay-Regular;
+	src: url('../assets/fonts/PlayfairDisplay-Regular.ttf');
 }
 
 @font-face {
-	font-family: FavoritBook;
-	src: url('../assets/fonts/ABCFavorit-Book-Trial.otf');
+	font-family: PlayfairDisplay-Medium;
+	src: url('../assets/fonts/PlayfairDisplay-Medium.ttf');
 }
 
 @font-face {
-	font-family: SuperiorMedium;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-Medium.otf');
-}
-
-@font-face {
-	font-family: SuperiorRegular;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-Regular.otf');
-}
-
-@font-face {
-	font-family: SuperiorRegularItalic;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-RegularItalic.otf');
-}
-
-@font-face {
-	font-family: SuperiorLight;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-Light.otf');
-}
-
-@font-face {
-	font-family: SuperiorLightItalic;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-LightItalic.otf');
+	font-family: PlayfairDisplay-Italic;
+	src: url('../assets/fonts/PlayfairDisplay-Italic.ttf');
 }
 
 body {
-	font-family: SuperiorLight, serif;
+	font-family: PlayfairDisplay-Regular, serif;
 	letter-spacing: 0.03em;
 	color: white;
-	font-size: 2.4em;
+	font-size: 2.2em;
 }
 
 a:link,
@@ -72,7 +52,7 @@ a:visited {
 #loading-overlay p {
 	text-decoration: underline;
 	cursor: pointer;
-	font-family: SuperiorLightItalic;
+	font-family: PlayfairDisplay-Italic;
 	font-size: 0.3em;
 }
 
@@ -91,7 +71,7 @@ a:visited {
 }
 
 .region-content #frontCover {
-	font-family: SuperiorRegular, sans-serif;
+	font-family: PlayfairDisplay-Medium, sans-serif;
 	/*letter-spacing: 0.1em;*/
 	position: absolute;
 	font-size: 0.65em;
@@ -110,7 +90,7 @@ a:visited {
 }
 
 #frontCover p {
-	font-family: SuperiorLightItalic;
+	font-family: PlayfairDisplay-Italic;
 	position: relative;
 	top: 280pt;
 	right: 8pt;
@@ -124,12 +104,12 @@ a:visited {
 }
 
 #intro h2 {
-	font-family: SuperiorRegular;
+	font-family: PlayfairDisplay-Medium;
 	font-size: 0.9em;
 }
 
 #intro p {
-	font-family: SuperiorLight;
+	font-family: PlayfairDisplay-Regular;
 	font-size: 0.8em;
 }
 

@@ -1,26 +1,11 @@
 @font-face {
-	font-family: SuperiorMedium;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-Medium.otf');
+	font-family: PlayfairDisplay-Regular;
+	src: url('../assets/fonts/PlayfairDisplay-Regular.ttf');
 }
 
 @font-face {
-	font-family: SuperiorRegular;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-Regular.otf');
-}
-
-@font-face {
-	font-family: SuperiorRegularItalic;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-RegularItalic.otf');
-}
-
-@font-face {
-	font-family: SuperiorLight;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-Light.otf');
-}
-
-@font-face {
-	font-family: SuperiorLightItalic;
-	src: url('../assets/fonts/SuperiorTitleTRIAL-LightItalic.otf');
+	font-family: PlayfairDisplay-Italic;
+	src: url('../assets/fonts/PlayfairDisplay-Italic.ttf');
 }
 
 html, body {
@@ -29,7 +14,7 @@ html, body {
 
 body {
 	background-color: #0A2753;
-	font-family: SuperiorLight;
+	font-family: PlayfairDisplay-Regular;
 	font-size: 1.6em;
 	color: white;
 }
