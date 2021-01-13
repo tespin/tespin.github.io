@@ -30,8 +30,13 @@ a:visited {
 }
 
 .gif {
+
+}
+
+#video {
 	position: relative;
-	bottom: 124pt;
+	bottom: 236pt!important;
+	left: 48pt!important;
 }
 
 #loading-overlay {
@@ -120,8 +125,13 @@ a:visited {
 
 #acknow {
 	position: relative;
-	bottom: 136pt;
-	left: 26pt;
+	bottom: 292pt;
+	font-size: 0.72em;
+}
+
+#credits {
+	position: relative;
+	bottom: 138pt;
 	font-size: 0.72em;
 }
 
