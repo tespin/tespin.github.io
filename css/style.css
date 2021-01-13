@@ -29,6 +29,11 @@ a:visited {
 	/*display: none!important;*/
 }
 
+.gif {
+	position: relative;
+	bottom: 124pt;
+}
+
 #loading-overlay {
     position: absolute;
     background-color: #003153;
