@@ -101,9 +101,10 @@ a:visited {
 
 #frontCover p {
 	font-family: PlayfairDisplay-Italic;
+	width: 130%;
 	position: relative;
 	top: 280pt;
-	right: 8pt;
+	right: 58pt;
 }
 
 #intro {
