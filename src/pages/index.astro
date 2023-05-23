@@ -1,4 +1,6 @@
 ---
+import FlexContainer from '../components/FlexContainer';
+import { ChevronUpIcon } from '@radix-ui/react-icons';
 ---
 
 <html lang='en'>
@@ -10,9 +12,18 @@
     <title>Astro</title>
   </head>
   <body>
-    <a href='/'>Home</a>
-    <a href='/about'>About</a>
-    <a href='/writing'>Writing</a>
-    <h1>Home</h1>
+    <FlexContainer className='xs:flex-col xs:h-screen xs:items-center'>
+      <FlexContainer className='xs:h-full xs:justify-center xs:items-center'>
+        <div class='xs:w-full sm:w-6/12 px-4'>
+          <p class='text-4xl text-justify'>
+            Tristan Espinoza is an artist and developer based in Los Angeles.
+          </p>
+        </div>
+      </FlexContainer>
+      <FlexContainer className='xs:flex-col xs:items-center xs:mb-4'>
+        <ChevronUpIcon />
+        <p>Index</p>
+      </FlexContainer>
+    </FlexContainer>
   </body>
 </html>
