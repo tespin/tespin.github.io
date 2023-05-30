@@ -1,5 +1,6 @@
 ---
 import FlexContainer from '../components/FlexContainer';
+import Dialog from '../components/Dialog';
 import { ChevronUpIcon } from '@radix-ui/react-icons';
 ---
 
@@ -21,8 +22,20 @@ import { ChevronUpIcon } from '@radix-ui/react-icons';
         </div>
       </FlexContainer>
       <FlexContainer className='xs:flex-col xs:items-center xs:mb-4'>
-        <ChevronUpIcon />
-        <p>Index</p>
+        <!-- <ChevronUpIcon /> -->
+        <Dialog client:load>
+          <ul
+            class='flex flex-col items-center w-screen h-screen space-y-10 pt-4 overflow-y-scroll'
+          >
+            <li class='border border-black px-24 py-8 text-6xl'>Work 1</li>
+            <li class='border border-black px-24 py-8 text-6xl'>Work 2</li>
+            <li class='border border-black px-24 py-8 text-6xl'>Work 3</li>
+            <li class='border border-black px-24 py-8 text-6xl'>Work 4</li>
+            <li class='border border-black px-24 py-8 text-6xl'>Work 5</li>
+            <li class='border border-black px-24 py-8 text-6xl'>Work 6</li>
+          </ul>
+        </Dialog>
+        <!-- <p>Index</p> -->
       </FlexContainer>
     </FlexContainer>
   </body>
