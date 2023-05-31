@@ -24,7 +24,7 @@ const Dialog = ({ className, children }: DialogProps) => {
         <DialogPrimitive.Content className='xs:flex xs:flex-col items-center xs:w-full absolute bottom-0 left-2/4 -translate-x-2/4'>
           {children}
           <DialogPrimitive.Close asChild>
-            <button className='flex flex-col items-center absolute bottom-4 px-6 py-2 bg-black text-white border-transparent'>
+            <button className='flex flex-col items-center absolute bottom-4 px-6 py-2 bg-black text-white border border-transparent'>
               <ChevronDownIcon />
               <p>Index</p>
             </button>
