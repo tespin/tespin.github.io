@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 
 interface ProjectListProps {
@@ -10,10 +11,27 @@ interface ProjectListProps {
 }
 
 const ProjectList = ({ className, projects }: ProjectListProps) => {
+  const [data, setData] = useState<
+    { title: string; date: string; brief: string; id: string }[]
+  >([]);
+
+  const dataWithId = projects.map((item) => {
+    return {
+      ...item,
+      id: crypto.randomUUID(),
+    };
+  });
+
+  useEffect(() => {
+    const newData = dataWithId;
+    console.log(newData);
+    setData(newData);
+  }, []);
+
   return (
     <ul className={className}>
-      {projects.map((item, index) => {
-        return <ProjectCard project={item}></ProjectCard>;
+      {data.map((item, index) => {
+        return <ProjectCard project={item} key={item.id}></ProjectCard>;
       })}
     </ul>
   );

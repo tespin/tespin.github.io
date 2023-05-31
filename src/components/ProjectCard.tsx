@@ -5,6 +5,7 @@ interface ProjectCardProps {
     title: string;
     date: string;
     brief: string;
+    id: string;
   };
 }
 

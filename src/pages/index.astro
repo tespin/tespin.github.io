@@ -25,7 +25,7 @@ import { projects } from '../utils/projects';
       <FlexContainer className='xs:flex-col xs:items-center xs:mb-4'>
         <!-- <ChevronUpIcon /> -->
         <Dialog client:load>
-          <ProjectList projects={projects} />
+          <ProjectList client:load projects={projects} />
           <!-- <ul
             class='flex flex-col items-center w-screen h-screen space-y-10 pt-4 overflow-y-scroll'
           > -->
