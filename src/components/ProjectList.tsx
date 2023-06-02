@@ -36,5 +36,4 @@ const ProjectList = ({ className, projects }: ProjectListProps) => {
     </ul>
   );
 };
-
 export default ProjectList;
