@@ -7,3 +7,5 @@ Repo that holds the code for the [tristanespinoza.com](https://www.tristanespino
 - feat: animations for index opening and closing
 - feat: add gh and live project links to projects
 - feat: desktop version
+- fix: margins on list items
+- fix: blurred div not fully fading on the edges
