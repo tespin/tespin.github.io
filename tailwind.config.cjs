@@ -9,6 +9,9 @@ module.exports = {
       ...defaultTheme.screens,
     },
     extend: {
+      boxShadow: {
+        base: '0px 0px 10px #000',
+      },
       keyframes: {
         fadeIn: {
           from: { opacity: '0' },
@@ -26,10 +29,27 @@ module.exports = {
           from: { transform: 'translateY(0%)' },
           to: { transform: 'translateY(100%)' },
         },
+        shadowIn: {
+          from: { boxShadow: 'none' },
+          to: { boxShadow: '0px 0px 10px #000' },
+        },
+        shadowOut: {
+          from: { boxShadow: '0px 0px 10px #000' },
+          to: { boxShadow: 'none' },
+        },
+        borderIn: {
+          from: { border: '1px solid transparent' },
+          to: { border: '1px solid black' },
+        },
+        borderOut: {
+          from: { border: '1px solid black' },
+          to: { border: '1px solid transparent' },
+        },
       },
       animation: {
         listShow: 'downTop 0.18s ease-out, fadeIn 0.15s linear',
         listHide: 'topDown 0.15s ease-out, fadeOut 0.12s linear',
+        indexOnHover: 'shadowIn 0.1s ease-in, borderOut 0.1s ease-in',
       },
     },
   },
