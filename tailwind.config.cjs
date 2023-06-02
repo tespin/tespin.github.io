@@ -10,7 +10,8 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        base: '0px 0px 10px #000',
+        base: '0px 15px 20px rgba(127, 127, 127, 0.4)',
+        top: '0px -40px 20px #FFF',
       },
       keyframes: {
         fadeIn: {
@@ -29,13 +30,17 @@ module.exports = {
           from: { transform: 'translateY(0%)' },
           to: { transform: 'translateY(100%)' },
         },
+        smUp: {
+          from: { transform: 'translateY(0px)' },
+          to: { transform: 'translateY(-2px)' },
+        },
+        smDown: {
+          from: { transform: 'translateY(-2px)' },
+          to: { transform: 'translateY(0px)' },
+        },
         shadowIn: {
           from: { boxShadow: 'none' },
-          to: { boxShadow: '0px 0px 10px #000' },
-        },
-        shadowOut: {
-          from: { boxShadow: '0px 0px 10px #000' },
-          to: { boxShadow: 'none' },
+          to: { boxShadow: '0px 5px 15px rgba(127, 127, 127, 0.4)' },
         },
         borderIn: {
           from: { border: '1px solid transparent' },
@@ -47,9 +52,11 @@ module.exports = {
         },
       },
       animation: {
-        listShow: 'downTop 0.18s ease-out, fadeIn 0.15s linear',
+        listShow: 'downTop 0.22s ease-out, fadeIn 0.18s linear',
         listHide: 'topDown 0.15s ease-out, fadeOut 0.12s linear',
         indexOnHover: 'shadowIn 0.1s ease-in, borderOut 0.1s ease-in',
+        chevronUp: 'smUp 0.15s ease-in',
+        chevronDown: 'smDown 0.15s ease-in',
       },
     },
   },

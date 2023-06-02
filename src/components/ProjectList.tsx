@@ -24,7 +24,6 @@ const ProjectList = ({ className, projects }: ProjectListProps) => {
 
   useEffect(() => {
     const newData = dataWithId;
-    console.log(newData);
     setData(newData);
   }, []);
 
