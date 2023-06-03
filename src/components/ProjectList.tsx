@@ -12,7 +12,14 @@ interface ProjectListProps {
 
 const ProjectList = ({ className, projects }: ProjectListProps) => {
   const [data, setData] = useState<
-    { title: string; date: string; brief: string; id: string }[]
+    {
+      title: string;
+      date: string;
+      brief: string;
+      github?: string;
+      live?: string;
+      id: string;
+    }[]
   >([]);
 
   const dataWithId = projects.map((item) => {
