@@ -1,4 +1,4 @@
-export const projects = [
+export const projectData = [
   {
     title: 'Owen Wilson Search Engine',
     date: 'May 2023',

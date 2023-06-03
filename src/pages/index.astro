@@ -2,7 +2,7 @@
 import FlexContainer from '../components/FlexContainer';
 import Dialog from '../components/Dialog';
 import ProjectList from '../components/ProjectList';
-import { projects } from '../utils/projects';
+import { projectData } from '../utils/projects';
 ---
 
 <html lang='en'>
@@ -28,7 +28,7 @@ import { projects } from '../utils/projects';
           <ProjectList
             client:load
             className='flex xs:flex-col xs:items-center mx-4 space-y-10'
-            projects={projects}
+            projects={projectData}
           />
         </Dialog>
       </FlexContainer>
