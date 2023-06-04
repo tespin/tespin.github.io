@@ -21,12 +21,12 @@ const Dialog = ({ children }: DialogProps) => {
       {isClient ? (
         <DialogPrimitive.Root open={open} onOpenChange={setOpen}>
           <DialogPrimitive.Trigger asChild>
-            <button className='flex flex-col px-6 py-4 items-center transition border border-black group'>
-              <ChevronUpIcon className='transition duration-100 group-hover:translate-y-[-2px] md:group-hover:animate-chevronUp' />
+            <button className='flex flex-col px-6 py-4 mb-4 items-center border border-black group'>
+              <ChevronUpIcon className='transition duration-100 group-hover:translate-y-[-2px] sm:group-hover:animate-chevronUp' />
               <p>Index</p>
             </button>
           </DialogPrimitive.Trigger>
-          <DialogPrimitive.Portal className='xs:w-full xs:flex xs:flex-col xs:justify-center'>
+          <DialogPrimitive.Portal className='xs:w-full xs:flex xs:flex-col xs:relative xs:justify-center'>
             <DialogPrimitive.Overlay className='xs:fixed xs:inset-0 backdrop-blur-md xs:bg-base/20' />
             <DialogPrimitive.Content
               className={`xs:flex xs:flex-col items-center xs:w-full h-screen pt-4 pb-[120px] absolute bottom-0 overflow-y-scroll ${
@@ -34,10 +34,10 @@ const Dialog = ({ children }: DialogProps) => {
               } `}
             >
               {children}
-              <div className='fixed bg-base w-full h-[80px] left-0 bottom-0 shadow-top '></div>
+              <div className='fixed bg-base w-full h-[96px] left-0 bottom-0 shadow-top '></div>
               <DialogPrimitive.Close asChild>
-                <button className='flex xs:flex-col xs:items-center fixed bottom-4 px-6 py-4 bg-black text-white transition border border-black group'>
-                  <ChevronDownIcon className='transition duration-100 translate-y-[-2px] group-hover:translate-y-[0px] md:group-hover:animate-chevronDown' />
+                <button className='xs:flex xs:flex-col items-center fixed bottom-8 px-6 py-4 bg-black text-white border border-black group'>
+                  <ChevronDownIcon className='transition duration-100 translate-y-[-2px] group-hover:translate-y-[0px] sm:group-hover:animate-chevronDown' />
                   <p>Index</p>
                 </button>
               </DialogPrimitive.Close>
