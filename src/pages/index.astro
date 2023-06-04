@@ -13,27 +13,24 @@ import { projectData } from '../utils/projects';
     <meta name='generator' content={Astro.generator} />
     <title>Tristan Espinoza</title>
   </head>
-  <body class='overflow-y-hidden bg-base'>
-    <FlexContainer
-      className='xs:h-screen xs:flex-col xs:justify-center xs:items-center'
-    >
-      <FlexContainer className='xs:justify-center xs:items-center'>
-        <div class='xs:w-full sm:w-6/12 px-4'>
-          <p class='text-4xl text-justify'>
-            Tristan Espinoza is an artist and developer based in Los Angeles.
-          </p>
-        </div>
-      </FlexContainer>
-      <FlexContainer className='xs:flex-col xs:justify-center xs:mt-8 xs:mb-4'>
-        <!-- <ChevronUpIcon /> -->
+  <body class='bg-base'>
+    <FlexContainer className='xs:justify-center'>
+      <FlexContainer className='xs:flex-col'>
+        <!-- <div class='xs:w-full sm:w-6/12 px-4'> -->
+        <div class=''></div>
+        <p class='text-4xl text-justify'>
+          Tristan Espinoza is an artist and developer based in Los Angeles.
+        </p>
         <Dialog client:load>
-          <ProjectList
-            client:load
-            className='flex xs:flex-col xs:items-center mx-4 space-y-10'
-            projects={projectData}
-          />
+          <ProjectList client:load className='' projects={projectData} />
         </Dialog>
       </FlexContainer>
     </FlexContainer>
+    <!-- <FlexContainer className=''> -->
+    <!-- <ChevronUpIcon /> -->
+    <!-- <Dialog client:load>
+        <ProjectList client:load className='' projects={projectData} />
+      </Dialog> -->
+    <!-- </FlexContainer> -->
   </body>
 </html>

@@ -15,12 +15,13 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ className, children, project }: ProjectCardProps) => {
   return (
-    <li className='border border-black mx-4 px-6 py-2 max-w-sm'>
+    // <li className='border border-black mx-4 px-6 py-2 max-w-sm'>
+    <li className='px-6 py-2 max-w-sm'>
       <h2 className='text-2xl'>{project.title}</h2>
       <p>{project.date}</p>
       <p className='mt-4'>{project.brief}</p>
       {project.github || project.live ? (
-        <div className='flex xs:flex-row mt-4 space-x-2'>
+        <div className=''>
           {project.github && (
             <a href={`${project.github}`}>
               <GitHubLogoIcon width={'1.13rem'} height={'1.13rem'} />
