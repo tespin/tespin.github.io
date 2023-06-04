@@ -9,20 +9,22 @@ import { projectData } from '../utils/projects';
   <head>
     <meta charset='utf-8' />
     <!-- <link rel='icon' type='image/svg+xml' href='/favicon.svg' /> -->
-    <meta name='viewport' content='width=device-width' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
     <meta name='generator' content={Astro.generator} />
     <title>Tristan Espinoza</title>
   </head>
   <body class='overflow-y-hidden bg-base'>
-    <FlexContainer className='xs:flex-col xs:h-screen xs:items-center'>
-      <FlexContainer className='xs:h-full xs:justify-center xs:items-center'>
+    <FlexContainer
+      className='xs:h-screen xs:flex-col xs:justify-center xs:items-center'
+    >
+      <FlexContainer className='xs:justify-center xs:items-center'>
         <div class='xs:w-full sm:w-6/12 px-4'>
           <p class='text-4xl text-justify'>
             Tristan Espinoza is an artist and developer based in Los Angeles.
           </p>
         </div>
       </FlexContainer>
-      <FlexContainer className='xs:flex-col xs:justify-center xs:mb-4'>
+      <FlexContainer className='xs:flex-col xs:justify-center xs:mt-8 xs:mb-4'>
         <!-- <ChevronUpIcon /> -->
         <Dialog client:load>
           <ProjectList
