@@ -36,7 +36,7 @@ const Dialog = ({ children }: DialogProps) => {
               {children}
               <div className='fixed bg-base w-full h-[80px] left-0 bottom-0 shadow-top '></div>
               <DialogPrimitive.Close asChild>
-                <button className='flex flex-col items-center fixed bottom-4 px-6 py-4 bg-black text-white transition border border-black group'>
+                <button className='flex xs:flex-col xs:items-center fixed bottom-4 px-6 py-4 bg-black text-white transition border border-black group'>
                   <ChevronDownIcon className='transition duration-100 translate-y-[-2px] group-hover:translate-y-[0px] group-hover:animate-chevronDown' />
                   <p>Index</p>
                 </button>
