@@ -29,7 +29,7 @@ const Dialog = ({ children }: DialogProps) => {
           <DialogPrimitive.Portal className='xs:w-full xs:flex xs:flex-col'>
             <DialogPrimitive.Overlay className='xs:fixed xs:inset-0 backdrop-blur-md xs:bg-base/20' />
             <DialogPrimitive.Content
-              className={`xs:flex xs:flex-col items-center xs:w-full h-screen pt-4 pb-[168px] absolute top-4 bottom-0 overflow-y-scroll ${
+              className={`xs:flex xs:flex-col items-center xs:w-full h-[calc(100%-96)] pt-4 pb-[168px] absolute top-4 bottom-0 overflow-y-scroll ${
                 open ? 'animate-listShow' : 'animate-listHide'
               } `}
             >

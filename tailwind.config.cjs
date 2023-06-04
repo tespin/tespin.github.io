@@ -57,8 +57,8 @@ module.exports = {
         },
       },
       animation: {
-        listShow: 'downTop 0.22s ease-out, fadeIn 0.18s linear',
-        listHide: 'topDown 0.15s ease-out, fadeOut 0.12s linear',
+        listShow: 'downTop 0.25s ease-out, fadeIn 0.22s linear',
+        listHide: 'topDown 0.18s ease-out, fadeOut 0.15s linear',
         indexOnHover: 'shadowIn 0.1s ease-in, borderOut 0.1s ease-in',
         chevronUp: 'smUp 0.15s ease-in',
         chevronDown: 'smDown 0.15s ease-in',
