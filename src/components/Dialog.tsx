@@ -39,12 +39,14 @@ const Dialog = ({ buttonClass, children }: DialogProps) => {
               } `}
             > */}
             <DialogPrimitive.Content
-              className={`absolute xs:w-full xs:h-full top-0 left-2/4 -translate-x-2/4`}
+              className={`absolute xs:w-full xs:h-full top-0 ${
+                open ? 'animate-listShow' : 'animate-listHide'
+              }`}
             >
               {children}
               {/* <div className='fixed bg-base w-full h-[96px] left-0 bottom-0 shadow-top '></div> */}
               {/* <div className='fixed bg-base w-full h-[96px] left-0 bottom-0 shadow-top '></div> */}
-              <FlexContainer className='fixed pb-4 xs:w-full bg-base xs:bottom-4 shadow-top'>
+              <FlexContainer className='fixed xs:pb-16 sm:pb-4 xs:w-full bg-base xs:bottom-4 shadow-top'>
                 <DialogPrimitive.Close asChild>
                   {/* <button className='xs:flex xs:flex-col xs:justify-center items-center xs:fixed left-2/4 -translate-x-2/4 xs:bottom-8 px-6 py-4 bg-black text-white border border-black group'> */}
                   <button className='flex flex-col items-center mx-auto my-2 px-6 py-2 bg-black text-white border border-black group'>
