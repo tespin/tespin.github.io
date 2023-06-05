@@ -4,9 +4,6 @@
 
 @layer utilities {
   .pb-safe {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 1rem);
-  }
-  .bottom-safe {
-    bottom: calc(env(safe-area-inset-bottom) + 1rem);
+    padding-bottom: calc(env(Safe-area-inset-bottom) + 1rem);
   }
 }
