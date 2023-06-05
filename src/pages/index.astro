@@ -15,14 +15,20 @@ import { projectData } from '../utils/projects';
   </head>
   <body class='bg-base'>
     <FlexContainer className='xs:justify-center'>
-      <FlexContainer className='xs:flex-col'>
+      <FlexContainer
+        className='xs:flex-col xs:justify-center xs:mx-4 xs:w-96 xs:h-screen '
+      >
         <!-- <div class='xs:w-full sm:w-6/12 px-4'> -->
         <div class=''></div>
         <p class='text-4xl text-justify'>
           Tristan Espinoza is an artist and developer based in Los Angeles.
         </p>
-        <Dialog client:load>
-          <ProjectList client:load className='' projects={projectData} />
+        <Dialog client:load buttonClass='mt-10'>
+          <ProjectList
+            client:load
+            className='flex xs:flex-col items-center xs:py-8 xs:space-y-4 xs:h-[calc(100%-116px)] overflow-y-scroll '
+            projects={projectData}
+          />
         </Dialog>
       </FlexContainer>
     </FlexContainer>

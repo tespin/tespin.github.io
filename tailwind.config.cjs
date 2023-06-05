@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       boxShadow: {
         base: '0px 15px 20px rgba(127, 127, 127, 0.4)',
-        top: '0px -40px 20px #F0DBA8',
+        top: '0px -44px 20px #F0DBA8',
       },
       colors: {
         base: {
