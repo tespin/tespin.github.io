@@ -39,9 +39,7 @@ const Dialog = ({ buttonClass, children }: DialogProps) => {
               } `}
             > */}
             <DialogPrimitive.Content
-              className={`absolute xs:w-full xs:h-full top-0 ${
-                open ? 'animate-listShow' : 'animate-listHide'
-              }`}
+              className={`absolute xs:w-full xs:h-full top-0 left-2/4 -translate-x-2/4`}
             >
               {children}
               {/* <div className='fixed bg-base w-full h-[96px] left-0 bottom-0 shadow-top '></div> */}
