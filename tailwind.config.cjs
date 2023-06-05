@@ -28,12 +28,12 @@ module.exports = {
           to: { opacity: '0' },
         },
         downTop: {
-          from: { transform: 'translateY(100%)' },
-          to: { transform: 'translateY(0%)' },
+          from: { transform: 'translateY(100%) translateX(-50%)' },
+          to: { transform: 'translateY(0%) translateX(-50%)' },
         },
         topDown: {
-          from: { transform: 'translateY(0%)' },
-          to: { transform: 'translateY(100%)' },
+          from: { transform: 'translateY(0%) translateX(-50%)' },
+          to: { transform: 'translateY(100%) translateX(-50%)' },
         },
         smUp: {
           from: { transform: 'translateY(0px)' },
