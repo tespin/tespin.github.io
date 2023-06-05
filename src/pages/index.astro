@@ -20,7 +20,7 @@ import '../styles/base.css';
   <body class='bg-base'>
     <FlexContainer className='xs:justify-center'>
       <FlexContainer
-        className='xs:flex-col xs:justify-center xs:mx-4 xs:w-96 xs:h-screen '
+        className='xs:flex-col xs:justify-center xs:mx-4 xs:w-96 xs:h-dynamic '
       >
         <!-- <div class='xs:w-full sm:w-6/12 px-4'> -->
         <div class=''></div>
@@ -30,7 +30,7 @@ import '../styles/base.css';
         <Dialog client:load buttonClass='mt-10'>
           <ProjectList
             client:load
-            className='flex xs:flex-col items-center xs:py-8 xs:space-y-4 xs:h-[calc(100vh-116px)] overflow-y-scroll '
+            className='flex xs:flex-col items-center xs:py-8 xs:space-y-4 xs:h-full overflow-y-scroll '
             projects={projectData}
           />
         </Dialog>

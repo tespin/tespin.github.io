@@ -6,4 +6,7 @@
   .pb-safe {
     padding-bottom: calc(env(Safe-area-inset-bottom) + 1rem);
   }
+  .h-dynamic {
+    height: 100dvh;
+  }
 }
