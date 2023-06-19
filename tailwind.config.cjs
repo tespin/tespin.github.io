@@ -11,11 +11,12 @@ module.exports = {
     extend: {
       boxShadow: {
         base: '0px 15px 20px rgba(127, 127, 127, 0.4)',
-        top: '0px -44px 15px #F0DBA8',
+        top: '0px -44px 15px #DCF4F5',
       },
       colors: {
         base: {
-          DEFAULT: '#F0DBA8',
+          // DEFAULT: '#A7A567',
+          DEFAULT: '#DCF4F5',
         },
       },
       keyframes: {

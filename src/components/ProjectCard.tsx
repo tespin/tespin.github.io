@@ -17,7 +17,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ className, children, project }: ProjectCardProps) => {
   return (
     // <li className='border border-black mx-4 px-6 py-2 max-w-sm'>
-    <li className='mx-4 px-6 py-2 max-w-sm border border-black'>
+    <li className='mx-4 px-6 py-2 w-96 border border-black'>
       <h2 className='text-2xl'>{project.title}</h2>
       <p>{project.date}</p>
       <p className='mt-4'>{project.brief}</p>

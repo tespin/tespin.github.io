@@ -17,7 +17,7 @@ import '../styles/base.css';
     <meta name='generator' content={Astro.generator} />
     <title>Tristan Espinoza</title>
   </head>
-  <body class='bg-base'>
+  <body class='bg-base font-serif'>
     <FlexContainer className='xs:justify-center'>
       <FlexContainer
         className='xs:flex-col xs:justify-center xs:mx-4 xs:w-96 xs:h-dynamic '
@@ -30,7 +30,7 @@ import '../styles/base.css';
         <Dialog client:load buttonClass='mt-10'>
           <ProjectList
             client:load
-            className='flex xs:flex-col items-center xs:py-8 xs:space-y-4 xs:h-[calc(100%-6rem)] overflow-y-scroll '
+            className='flex xs:flex-col items-center xs:w-full xs:py-8 xs:space-y-4 xs:h-[calc(100%-6.5rem)] overflow-y-scroll '
             projects={projectData}
           />
         </Dialog>
