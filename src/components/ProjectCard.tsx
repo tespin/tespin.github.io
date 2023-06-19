@@ -25,12 +25,12 @@ const ProjectCard = ({ className, children, project }: ProjectCardProps) => {
         <FlexContainer className='xs:mt-4 xs:space-x-2 '>
           {project.github && (
             <a href={`${project.github}`}>
-              <GitHubLogoIcon width={'1.25rem'} height={'1.25rem'} />
+              <GitHubLogoIcon width={'1.5rem'} height={'1.5rem'} />
             </a>
           )}
           {project.live && (
             <a href={`${project.live}`}>
-              <ExternalLinkIcon width={'1.25rem'} height={'1.25rem'} />
+              <ExternalLinkIcon width={'1.5rem'} height={'1.5rem'} />
             </a>
           )}
         </FlexContainer>
