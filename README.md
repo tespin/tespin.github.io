@@ -1,11 +1,7 @@
 # Tristan Online
 
-Repo that holds the code for the [tristanespinoza.com](https://www.tristanespinoza.com) website. The website is built with [Astro](https://astro.build/).
+Repo that holds the code for the [tespin.github.io](https://tespin.github.io) website. The website is built with [Astro](https://astro.build/) and [Radix UI](https://www.radix-ui.com/).
 
 ## To Do
 
-- feat: animations for index opening and closing
-- feat: add gh and live project links to projects
 - feat: desktop version
-- fix: margins on list items
-- fix: blurred div not fully fading on the edges
