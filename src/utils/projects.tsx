@@ -16,7 +16,7 @@ export const projectData = [
     title: 'Banned Prison Books API',
     date: 'January 2023',
     brief: 'A free Rest API for books banned in state prisons.',
-    github: 'https://github.com/tespin/banned-prison-books-api',
+    github: 'https://banned-prison-books-api.onrender.com/',
     live: 'banned-prison-books-api.onrender.com/',
   },
   {
